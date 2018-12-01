@@ -12,6 +12,25 @@ public class App {
 
     private String reason;
 
+    private String startTime;
+
+    public App(App app) {
+        this.addr=app.getAddr();
+        this.appointMan=app.getAppointMan();
+        this.createTime=app.getCreateTime();
+        this.endTime=app.getEndTime();
+        this.reason=app.getReason();
+        this.startTime=app.getStartTime();
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
     public String getAddr() {
         return addr;
     }
