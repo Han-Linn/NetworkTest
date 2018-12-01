@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         }).start();
     }
-
+//
     /*
     private void parseXMLWithPull(String xmlData) {
         try {
