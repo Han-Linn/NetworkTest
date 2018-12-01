@@ -1,4 +1,4 @@
-package com.example.networktest;
+package com.example.andy;
 
 public class App {
 
@@ -14,7 +14,7 @@ public class App {
 
     private String startTime;
 
-    public App(App app) {
+    public App(com.example.networktest.App app) {
         this.addr=app.getAddr();
         this.appointMan=app.getAppointMan();
         this.createTime=app.getCreateTime();
