@@ -1,4 +1,6 @@
-package com.example.networktest;
+package com.example.andy;
+
+import com.example.networktest.HttpCallbackListener;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -9,7 +11,6 @@ import java.net.URL;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.Response;
 
 public class HttpUtil {
 
@@ -51,7 +52,7 @@ public class HttpUtil {
         }).start();
     }
 
-    public static void sendOkHttpRequest(final String address, final okhttp3.Callback callback) {
+    public static void sendOkHttpRequest(final String address, final Callback callback) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(address)
