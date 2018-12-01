@@ -1,5 +1,6 @@
 package com.example.andy;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Button sendRequest = findViewById(R.id.send_request);
+        Button left = findViewById(R.id.left);
         responseText = findViewById(R.id.response_text);
         SystemTime = findViewById(R.id.mytime);
 
@@ -54,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         new TimeThread().start(); //启动新线程
 
         sendRequest.setOnClickListener(this);
+        left.setOnClickListener(this);
 
     }
 
@@ -64,6 +67,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //              sendRequestWithOkHttp();
 //            test();
             test2();
+        }else if(v.getId() ==R.id.left){
+            Intent intent = new Intent(this,Activity_Left.class);
+            startActivity(intent);
         }
     }
 
