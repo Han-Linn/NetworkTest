@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -44,7 +45,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private StringBuilder password;
     private TextView textView;
     private static final int msgKey1 = 1;
-    private static final int msgKey2 = 2;
 
     private TextView SystemTime;//定义一个获取系统日期的变量
 
@@ -239,9 +239,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button11:
 //                if (password.toString().length() == 6) {
 //                    textView.setText(password.toString());
-//                    setImage();
 //                }
-                textView.setText(password.toString());
+                Log.d("main", "------------->" + password.toString());
                 break;
             default:
                 break;
@@ -393,54 +392,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
-
-    public class TextThread extends Thread {
-        @Override
-        public void run() {
-            do {
-                try {
-                    Thread.sleep(1000);
-                    Message msg = new Message();
-                    msg.what = msgKey2;     //消息(一个整型值)
-                    mHandler.sendMessage(msg);      // 每隔1秒发送一个msg给mHandler
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } while (true);
-        }
-
-        //在主线程里面处理消息并更新UI界面
-        private Handler mHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                switch (msg.what) {
-                    case msgKey1:
-                        SystemTime.setText(getTime());
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-
-        //获得当前年月日时分秒星期
-        public String getTime() {
-            final Calendar c = Calendar.getInstance();
-            c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-            String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
-            String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
-            String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
-            String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
-            String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
-
-            return mYear + "年" + mMonth + "月" + mDay + "日";
-        }
-
-
-    }
-
 
     public class TimeThread extends Thread {
         @Override
