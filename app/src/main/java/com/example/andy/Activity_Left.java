@@ -20,7 +20,7 @@ public class Activity_Left extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity__left);
+        setContentView(R.layout.activity_left);
         init();
         setOnclick();
         setImage();
