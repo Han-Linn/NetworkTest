@@ -1,12 +1,13 @@
 package com.example.andy;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -37,6 +38,12 @@ import okhttp3.Response;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private List<Map> list;
     ListView responseText;
+    private Button button1, button2, button3, button4, button5,
+            button6, button7, button8, button9, button10, button11;
+    private ImageView imageView1, imageView2, imageView3, imageView4,
+            imageView5, imageView6;
+    private StringBuilder password;
+    private TextView textView;
     private static final int msgKey1 = 1;
 
     private TextView SystemTime;//定义一个获取系统日期的变量
@@ -47,36 +54,204 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Button sendRequest = findViewById(R.id.send_request);
-        Button left = findViewById(R.id.left);
+        init();
+        setOnclick();
+        setImage();
+        new TimeThread().start(); //启动新线程
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    Thread.sleep(1000);
+                    test2();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        }).start();
+
+    }
+
+    private void init() {
+        button1 = findViewById(R.id.button1);
+        button2 = findViewById(R.id.button2);
+        button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
+        button5 = findViewById(R.id.button5);
+        button6 = findViewById(R.id.button6);
+        button7 = findViewById(R.id.button7);
+        button8 = findViewById(R.id.button8);
+        button9 = findViewById(R.id.button9);
+        button10 = findViewById(R.id.button10);
+        button11 = findViewById(R.id.button11);
+        imageView1 = findViewById(R.id.imageView1);
+        imageView2 = findViewById(R.id.imageView2);
+        imageView3 = findViewById(R.id.imageView3);
+        imageView4 = findViewById(R.id.imageView4);
+        imageView5 = findViewById(R.id.imageView5);
+        imageView6 = findViewById(R.id.imageView6);
+        textView = findViewById(R.id.textView);
         responseText = findViewById(R.id.response_text);
         SystemTime = findViewById(R.id.mytime);
+        password = new StringBuilder();
+    }
 
+    private void setImage() {
+        switch (password.toString().length()) {
+            case 0:
+                imageView1.setImageResource(R.drawable.grey);
+                imageView2.setImageResource(R.drawable.grey);
+                imageView3.setImageResource(R.drawable.grey);
+                imageView4.setImageResource(R.drawable.grey);
+                imageView5.setImageResource(R.drawable.grey);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 1:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.grey);
+                imageView3.setImageResource(R.drawable.grey);
+                imageView4.setImageResource(R.drawable.grey);
+                imageView5.setImageResource(R.drawable.grey);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 2:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.black);
+                imageView3.setImageResource(R.drawable.grey);
+                imageView4.setImageResource(R.drawable.grey);
+                imageView5.setImageResource(R.drawable.grey);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 3:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.black);
+                imageView3.setImageResource(R.drawable.black);
+                imageView4.setImageResource(R.drawable.grey);
+                imageView5.setImageResource(R.drawable.grey);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 4:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.black);
+                imageView3.setImageResource(R.drawable.black);
+                imageView4.setImageResource(R.drawable.black);
+                imageView5.setImageResource(R.drawable.grey);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 5:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.black);
+                imageView3.setImageResource(R.drawable.black);
+                imageView4.setImageResource(R.drawable.black);
+                imageView5.setImageResource(R.drawable.black);
+                imageView6.setImageResource(R.drawable.grey);
+                break;
+            case 6:
+                imageView1.setImageResource(R.drawable.black);
+                imageView2.setImageResource(R.drawable.black);
+                imageView3.setImageResource(R.drawable.black);
+                imageView4.setImageResource(R.drawable.black);
+                imageView5.setImageResource(R.drawable.black);
+                imageView6.setImageResource(R.drawable.black);
+                break;
+            default:
+                break;
+        }
+    }
 
-        new TimeThread().start(); //启动新线程
-
-        sendRequest.setOnClickListener(this);
-        left.setOnClickListener(this);
-
+    private void setOnclick() {
+        button1.setOnClickListener(this);
+        button2.setOnClickListener(this);
+        button3.setOnClickListener(this);
+        button4.setOnClickListener(this);
+        button5.setOnClickListener(this);
+        button6.setOnClickListener(this);
+        button7.setOnClickListener(this);
+        button8.setOnClickListener(this);
+        button9.setOnClickListener(this);
+        button10.setOnClickListener(this);
+        button11.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.send_request) {
-//            sendRequestWithHttpURLConnection();
-//              sendRequestWithOkHttp();
-//            test();
-            test2();
-        }else if(v.getId() ==R.id.left){
-            Intent intent = new Intent(this,Activity_Left.class);
-            startActivity(intent);
+        switch (v.getId()) {
+            case R.id.button1:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("1");
+                    setImage();
+                }
+                break;
+            case R.id.button2:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("2");
+                    setImage();
+                }
+                break;
+            case R.id.button3:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("3");
+                    setImage();
+                }
+                break;
+            case R.id.button4:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("4");
+                    setImage();
+                }
+                break;
+            case R.id.button5:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("5");
+                    setImage();
+                }
+                break;
+            case R.id.button6:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("6");
+                    setImage();
+                }
+                break;
+            case R.id.button7:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("7");
+                    setImage();
+                }
+                break;
+            case R.id.button8:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("8");
+                    setImage();
+                }
+                break;
+            case R.id.button9:
+                if (password.toString().length() > -1 && password.toString().length() < 6) {
+                    password.append("9");
+                    setImage();
+                }
+                break;
+            case R.id.button10:
+                if (password.toString().length() > 0) {
+                    password.deleteCharAt(password.length() - 1);
+                    setImage();
+                }
+                break;
+            case R.id.button11:
+//                if (password.toString().length() == 6) {
+//                    textView.setText(password.toString());
+//                }
+                Log.d("main", "------------->" + password.toString());
+                break;
+            default:
+                break;
         }
     }
+
 
     private void test() {
         String string = Util.getJson("get_data.json", this);
         string = string.substring(21, string.length() - 1);
-        showResponse(string);
+        showResponse();
         String jsonData = new String(string);
         parseJSONWithGSON(jsonData);
     }
@@ -84,19 +259,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void test2() {
         HttpUtil.sendHttpRequest("http://ketansoft.com/kt_onlinemj/mjappoint/appointList", new
                 HttpCallbackListener() {
-            @Override
-            public void onFinish(String response) {
-                response = response.substring(21, response.length() - 1);
-                jsonData = new String(response);
-                parseJSONWithGSON(response);
-                showResponse(response);
-            }
+                    @Override
+                    public void onFinish(String response) {
+                        response = response.substring(21, response.length() - 1);
+                        jsonData = new String(response);
+                        parseJSONWithGSON(response);//得到list数据
+                        showResponse();
+                    }
 
-            @Override
-            public void onError(Exception e) {
-
-            }
-        });
+                    @Override
+                    public void onError(Exception e) {
+                    }
+                });
     }
 
     private void sendRequestWithHttpURLConnection() {
@@ -125,7 +299,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     String string = response.toString();
                     string = string.substring(21, string.length() - 1);
-                    showResponse(string);
+                    showResponse();
                     //保存jsonData
                     jsonData = new String(string);
                     parseJSONWithGSON(string);
@@ -207,8 +381,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         return appList;
     }
 
-
-    private void showResponse(final String response) {
+    private void showResponse() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
@@ -219,7 +392,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
     }
-
 
     public class TimeThread extends Thread {
         @Override
@@ -233,7 +405,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
             } while (true);
         }
 

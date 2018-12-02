@@ -26,12 +26,6 @@ public class Activity_Left extends AppCompatActivity implements View.OnClickList
         setImage();
     }
 
-    private void set() {
-        if (password.toString().length() != 0) {
-
-        }
-    }
-
     private void init() {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
