@@ -14,15 +14,6 @@ public class App {
 
     private String startTime;
 
-    public App(com.example.networktest.App app) {
-        this.addr=app.getAddr();
-        this.appointMan=app.getAppointMan();
-        this.createTime=app.getCreateTime();
-        this.endTime=app.getEndTime();
-        this.reason=app.getReason();
-        this.startTime=app.getStartTime();
-    }
-
     public String getStartTime() {
         return startTime;
     }
