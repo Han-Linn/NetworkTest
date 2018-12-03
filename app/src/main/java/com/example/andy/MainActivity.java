@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.networktest.App;
 import com.example.networktest.HttpCallbackListener;
 import com.example.networktest.HttpUtil;
 import com.example.networktest.R;
@@ -36,14 +37,13 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private List<Map> list;
-    private List<App> list2;
-
     ListView responseText;
     private Button button1, button2, button3, button4, button5,
             button6, button7, button8, button9, button10, button11;
     private ImageView imageView1, imageView2, imageView3, imageView4,
             imageView5, imageView6;
     private StringBuilder password;
+    private TextView textView;
     private static final int msgKey1 = 1;
 
     private TextView SystemTime;//定义一个获取系统日期的变量
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.test_layout);
         init();
         setOnclick();
         setImage();
@@ -90,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView4 = findViewById(R.id.imageView4);
         imageView5 = findViewById(R.id.imageView5);
         imageView6 = findViewById(R.id.imageView6);
+        textView = findViewById(R.id.textView);
         responseText = findViewById(R.id.response_text);
         SystemTime = findViewById(R.id.mytime);
         password = new StringBuilder();
@@ -355,26 +356,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {
         }.getType());
         list = new ArrayList<>();
-        list2 = new ArrayList<>();
-        App app2=null;
         for (App app : appList) {
-            app2=new App();
-            app2.setAddr(app.getAddr());
-            app2.setAppointMan(app.getAddr());
-            app2.setCreateTime(app.getAddr());
-            app2.setStartTime(app.getAppointMan());
-            app2.setEndTime(app.getEndTime());
-            app2.setReason(app.getReason());
-            list2.add(app2);
-
-//            Map<String, String> map = new HashMap<>();
-//            map.put("addr", app.getAddr());
-//            map.put("appointMan", app.getAppointMan());
-//            map.put("createTime", app.getCreateTime());
-//            map.put("startTime", app.getStartTime());
-//            map.put("endTime", app.getEndTime());
-//            map.put("reason", app.getReason());
-//            list.add(map);
+//            Log.d("MainActivity", "addr is " + app.getAddr());
+//            Log.d("MainActivity", "appointMan is " + app.getAppointMan());
+//            Log.d("MainActivity", "createTime is " + app.getCreateTime());
+//            Log.d("MainActivity", "startTime is " + app.getStartTime());
+//            Log.d("MainActivity", "endTime is " + app.getEndTime());
+//            Log.d("MainActivity", "reason is " + app.getReason());
+            Map<String, String> map = new HashMap<>();
+            map.put("addr", app.getAddr());
+            map.put("appointMan", app.getAppointMan());
+            map.put("createTime", app.getCreateTime());
+            map.put("startTime", app.getStartTime());
+            map.put("endTime", app.getEndTime());
+            map.put("reason", app.getReason());
+            list.add(map);
         }
     }
 
@@ -391,7 +387,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void run() {
                 // 在这里进行UI操作，将结果显示到界面上
 //                responseText.setText(response);
-                ListAdapter adapter = new ListAdapter(com.example.andy.MainActivity.this, list2);
+                ListAdapter adapter = new ListAdapter(com.example.andy.MainActivity.this, list);
                 responseText.setAdapter(adapter);
             }
         });

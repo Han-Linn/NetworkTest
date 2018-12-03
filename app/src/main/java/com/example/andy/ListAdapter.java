@@ -14,9 +14,9 @@ import java.util.Map;
 
 public class ListAdapter extends BaseAdapter {
     private Context context;
-    private List<App> list;
+    private List<Map> list;
 
-    public ListAdapter(Context context, List<App> dataList) {
+    public ListAdapter(Context context, List<Map> dataList) {
         this.context = context;
         this.list = dataList;
     }
@@ -56,16 +56,10 @@ public class ListAdapter extends BaseAdapter {
             viewholder = (ViewHolder) convertView.getTag();
         }
 
-//        String Name = list.get(position).get("addr").toString();
-//        String DateTime1 = list.get(position).get("startTime").toString();
-//        String DateTime2 = list.get(position).get("endTime").toString();
-//        String Name_AppointMan = list.get(position).get("appointMan").toString();
-
-        String Name = list.get(position).getAddr();
-        String DateTime1 = list.get(position).getStartTime();
-        String DateTime2 = list.get(position).getEndTime();
-        String Name_AppointMan = list.get(position).getAppointMan();
-
+        String Name = list.get(position).get("addr").toString();
+        String DateTime1 = list.get(position).get("startTime").toString();
+        String DateTime2 = list.get(position).get("endTime").toString();
+        String Name_AppointMan = list.get(position).get("appointMan").toString();
         viewholder.Name_Theme.setText(Name);
         viewholder.DateTime1.setText(DateTime1);
         viewholder.DateTime2.setText(DateTime2);
