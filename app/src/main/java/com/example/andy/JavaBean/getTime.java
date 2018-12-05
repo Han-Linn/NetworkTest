@@ -1,4 +1,4 @@
-package com.example.andy;
+package com.example.andy.JavaBean;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //测试保存的json数据,返回包含数据的list
                     List<App> list=getList(jsonData);
                     /*for (App app:list)
-                   Log.i("MainActivity",""+app.getAddr()+"/"+app.getAppointMan()+"/"+app.getCreateTime()
+                   Log.i("Activity_Appointment",""+app.getAddr()+"/"+app.getAppointMan()+"/"+app.getCreateTime()
                            +"/"+app.getEndTime()+"/"+app.getReason()+"/"+app.getStartTime());*/
 
                 } catch (Exception e) {
@@ -188,10 +188,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     // 完成解析某个结点
                     case XmlPullParser.END_TAG: {
                         if ("app".equals(nodeName)) {
-                            Log.d("MainActivity", "addr is " + addr);
-                            Log.d("MainActivity", "appointMan is " + appointMan);
-                            Log.d("MainActivity", "createTime is " + createTime);
-                            Log.d("MainActivity", "endTime is " + endTime);
+                            Log.d("Activity_Appointment", "addr is " + addr);
+                            Log.d("Activity_Appointment", "appointMan is " + appointMan);
+                            Log.d("Activity_Appointment", "createTime is " + createTime);
+                            Log.d("Activity_Appointment", "endTime is " + endTime);
                         }
                         break;
                     }
@@ -230,10 +230,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String endTime = jsonObject.getString("endTime");
                 String startTime=jsonObject.getString("startTime");
 
-                Log.d("MainActivity", "addr is " + addr);
-                Log.d("MainActivity", "appointMan is " + appointMan);
-                Log.d("MainActivity", "createTime is " + createTime);
-                Log.d("MainActivity", "endTime is " + endTime);
+                Log.d("Activity_Appointment", "addr is " + addr);
+                Log.d("Activity_Appointment", "appointMan is " + appointMan);
+                Log.d("Activity_Appointment", "createTime is " + createTime);
+                Log.d("Activity_Appointment", "endTime is " + endTime);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -244,11 +244,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Gson gson = new Gson();
         List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {}.getType());
         for (App app : appList) {
-            Log.d("MainActivity", "addr is " + app.getAddr());
-            Log.d("MainActivity", "appointMan is " + app.getAppointMan());
-            Log.d("MainActivity", "createTime is " + app.getCreateTime());
-            Log.d("MainActivity", "endTime is " + app.getEndTime());
-            Log.d("MainActivity","startTime is "+app.getStartTime());
+            Log.d("Activity_Appointment", "addr is " + app.getAddr());
+            Log.d("Activity_Appointment", "appointMan is " + app.getAppointMan());
+            Log.d("Activity_Appointment", "createTime is " + app.getCreateTime());
+            Log.d("Activity_Appointment", "endTime is " + app.getEndTime());
+            Log.d("Activity_Appointment","startTime is "+app.getStartTime());
         }
     }
 

@@ -16,7 +16,7 @@ android {
         main {
             res.srcDirs = [
 //                    'src/main/res/layout-land',
-                           'src/main/res/layouts/',
+//                           'src/main/res/layouts/',
                            'src/main/res/']
         }
     }
