@@ -20,6 +20,7 @@ android {
                            'src/main/res/']
         }
     }
+
     buildTypes {
         release {
             minifyEnabled false
