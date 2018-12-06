@@ -1,6 +1,8 @@
 package com.example.andy.JavaBean;
 
-public class GetCourse {
+import org.litepal.crud.DataSupport;
+
+public class GetCourse extends DataSupport {
     private String clazz;
     private String courseName;
     private String teacher;
@@ -28,6 +30,4 @@ public class GetCourse {
     public void setTeacher(String teacher) {
         this.teacher = teacher;
     }
-
-
 }

@@ -2,17 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Chapter01/Chapter01.iml" filepath="$PROJECT_DIR$/Chapter01/Chapter01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter02/Chapter02.iml" filepath="$PROJECT_DIR$/Chapter02/Chapter02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter03/Chapter03.iml" filepath="$PROJECT_DIR$/Chapter03/Chapter03.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter04/Chapter04.iml" filepath="$PROJECT_DIR$/Chapter04/Chapter04.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter05/Chapter05.iml" filepath="$PROJECT_DIR$/Chapter05/Chapter05.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter06/Chapter06.iml" filepath="$PROJECT_DIR$/Chapter06/Chapter06.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter07/Chapter07.iml" filepath="$PROJECT_DIR$/Chapter07/Chapter07.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter08/Chapter08.iml" filepath="$PROJECT_DIR$/Chapter08/Chapter08.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter08_RemoteServiceClient/Chapter08_RemoteServiceClient.iml" filepath="$PROJECT_DIR$/Chapter08_RemoteServiceClient/Chapter08_RemoteServiceClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Chapter09/Chapter09.iml" filepath="$PROJECT_DIR$/Chapter09/Chapter09.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Course_Test.iml" filepath="$PROJECT_DIR$/Course_Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/NetworkTest.iml" filepath="$PROJECT_DIR$/NetworkTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

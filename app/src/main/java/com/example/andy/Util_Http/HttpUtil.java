@@ -5,6 +5,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
+import java.util.List;
+import java.util.Map;
 
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
@@ -14,7 +17,7 @@ import okhttp3.Response;
 //封装发送Http请求获取数据
 public class HttpUtil {
 
-    //使用HttpURLConnection发送请求
+    //使用HttpURLConnection发送GET请求
     public static void sendHttpRequest(final String address, final HttpCallbackListener listener) {
         new Thread(new Runnable() {
             @Override
@@ -61,5 +64,4 @@ public class HttpUtil {
                 .build();
         client.newCall(request).enqueue(callback);
     }
-
 }

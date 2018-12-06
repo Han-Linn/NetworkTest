@@ -5,27 +5,23 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
-import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Parse.Utility;
+import com.example.andy.Util_Http.HttpCallbackListener;
+import com.example.andy.Util_Http.HttpUtil;
+import com.example.andy.Util_Http.HttpUtli2;
+import com.example.andy.Util_Http.OnResponseListner;
 import com.example.networktest.R;
 
-import java.io.IOException;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.TimeZone;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
     private List<GetCourse> list;
@@ -64,7 +60,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
-//                    sendHttpRequest();
+                    sendHttpRequest();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -87,44 +83,60 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    //使用OkHttp请求Http获取课表数据
+    //请求Http获取课表数据
     private void sendOkHttpRequest() {
-        sendOkHttpRequest("http://ketansoft.com/kt_onlinemj/tbkc", new
-                okhttp3.Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
+        String url = "http://ketansoft.com/kt_onlinemj/tbkc";
+        String encode="utf-8";
+            Map<String,String> map=new HashMap<>();
+            map.put("username","931663592");
+            map.put("password","zcoolshuai18O5");
+            map.put("xnxqh","2018-2019-1");
+            map.put("skyx","11");
+            map.put("xqid","1");
+            map.put("classroom","实验楼802");
+            map.put("zc1","13");
+            map.put("zc2","13");
 
+        HttpUtil.sendHttpRequest(url, new HttpCallbackListener() {
+                    @Override
+                    public void onFinish(String response) {
+                        Log.d("Activity_Course第一", "---" + response.length());
                     }
 
                     @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        String jsondata = response.body().string();
-                        if (jsondata.length() > 31) {
-                            list = new Utility().parseJSONWithGSON2(jsondata.substring(11, jsondata.length() - 31));
-                            showResponse();//运用封装方法解析JSON数据得到list
-                        }
+                    public void onError(Exception e) {
                     }
                 });
+
+        HttpUtli2.postRequest(url, map, encode, new OnResponseListner() {
+            @Override
+            public void onSucess(String response) {
+//                    response = response.substring(11, response.length() - 31);
+//                list = new Utility().parseJSONWithGSON2(response);
+                Log.d("Activity_Course第二", "---" + response.length());
+//                        Log.d("Activity_Course","++++++++++++++++++++++++++++++++++"+(list.get(3).getClazz()).length());
+                showResponse();//运用封装方法解析JSON数据得到list
+            }
+
+            @Override
+            public void onError(String error) {
+
+            }
+        });
     }
 
-    public void sendOkHttpRequest(final String address, final Callback callback) {
-        SendCourse sendCourse = new SendCourse();
-        RequestBody requestBody = new FormBody.Builder()
-                .add("username", sendCourse.getUSENAME())
-                .add("password", sendCourse.getUSENAME())
-                .add("xnxqh", sendCourse.getXnxqh())
-                .add("skyx", sendCourse.getSkyx())
-                .add("xqid", sendCourse.getXqid())
-                .add("classroom", sendCourse.getClassroom())
-                .add("zc1", sendCourse.getZc1())
-                .add("zc2", sendCourse.getZc2())
-                .build();
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(address)
-                .post(requestBody)
-                .build();
-        client.newCall(request).enqueue(callback);
+    private void sendHttpRequest() {
+        HttpUtil.sendHttpRequest("http://ketansoft.com/kt_onlinemj/mjappoint/appointList", new
+                HttpCallbackListener() {
+                    @Override
+                    public void onFinish(String response) {
+                        Log.d("Activity_Course第三", "---" + response.length());
+                    }
+
+                    @Override
+                    public void onError(Exception e) {
+                    }
+                });
     }
 
     //显示ListView

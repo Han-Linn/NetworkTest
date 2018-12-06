@@ -68,6 +68,7 @@ public class Utility {
                 }
                 list.add(getcourse);
             }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

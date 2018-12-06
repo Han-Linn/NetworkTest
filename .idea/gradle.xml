@@ -8,16 +8,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/Chapter01" />
-            <option value="$PROJECT_DIR$/Chapter02" />
-            <option value="$PROJECT_DIR$/Chapter03" />
-            <option value="$PROJECT_DIR$/Chapter04" />
-            <option value="$PROJECT_DIR$/Chapter05" />
-            <option value="$PROJECT_DIR$/Chapter06" />
-            <option value="$PROJECT_DIR$/Chapter07" />
-            <option value="$PROJECT_DIR$/Chapter08" />
-            <option value="$PROJECT_DIR$/Chapter08_RemoteServiceClient" />
-            <option value="$PROJECT_DIR$/Chapter09" />
+            <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
