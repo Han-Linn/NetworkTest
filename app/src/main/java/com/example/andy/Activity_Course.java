@@ -17,7 +17,12 @@ import com.example.networktest.HttpUtil;
 import com.example.networktest.R;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -44,15 +49,15 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
             yi_1112_3, er_12_1, er_12_2, er_12_3, er_34_1, er_34_2, er_34_3, er_56_1, er_56_2,
             er_56_3, er_78_1, er_78_2, er_78_3, er_910_1, er_910_2, er_910_3, er_1112_1, er_1112_2,
             er_1112_3, san_12_1, san_12_2, san_12_3, san_34_1, san_34_2, san_34_3, san_56_1,
-            san_56_2,
-            san_56_3, san_78_1, san_78_2, san_78_3, san_910_1, san_910_2, san_910_3, san_1112_1,
-            san_1112_2,
-            san_1112_3, si_12_1, si_12_2, si_12_3, si_34_1, si_34_2, si_34_3, si_56_1, si_56_2,
+            san_56_2, san_56_3, san_78_1, san_78_2, san_78_3, san_910_1, san_910_2, san_910_3, san_1112_1,
+            san_1112_2, san_1112_3, si_12_1, si_12_2, si_12_3, si_34_1, si_34_2, si_34_3, si_56_1, si_56_2,
             si_56_3, si_78_1, si_78_2, si_78_3, si_910_1, si_910_2, si_910_3, si_1112_1, si_1112_2,
             si_1112_3, wu_12_1, wu_12_2, wu_12_3, wu_34_1, wu_34_2, wu_34_3, wu_56_1, wu_56_2,
-            wu_56_3,
-            wu_78_1, wu_78_2, wu_78_3, wu_910_1, wu_910_2, wu_910_3, wu_1112_1, wu_1112_2,
-            wu_1112_3;
+            wu_56_3, wu_78_1, wu_78_2, wu_78_3, wu_910_1, wu_910_2, wu_910_3, wu_1112_1, wu_1112_2,
+            wu_1112_3, liu_12_1, liu_12_2, liu_12_3, liu_34_1, liu_34_2, liu_34_3, liu_56_1,
+            liu_56_2, liu_56_3, liu_78_1, liu_78_2, liu_78_3, liu_910_1, liu_910_2, liu_910_3, liu_1112_1, liu_1112_2,
+            liu_1112_3, qi_12_1, qi_12_2, qi_12_3, qi_34_1, qi_34_2, qi_34_3, qi_56_1, qi_56_2,
+            qi_56_3, qi_78_1, qi_78_2, qi_78_3, qi_910_1, qi_910_2, qi_910_3, qi_1112_1, qi_1112_2, qi_1112_3;
     private static final int msgKey1 = 1;
     private TextView SystemTime;//定义一个获取系统日期的变量
 
@@ -120,7 +125,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
                         String jsondata = response.body().string();
-                            parseJSONWithGSON2(jsondata.substring(11, jsondata.length() - 31));
+                        parseJSONWithGSON3(jsondata.substring(11, jsondata.length() - 31));
                         //得到list数据
                         showResponse();
                     }
@@ -167,7 +172,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
     //解析课表JSON数据
     private void parseJSONWithGSON2(String jsonData) {
-        Gson gson  = new Gson();
+        Gson gson = new Gson();
         List<GetCourse> appList = gson.fromJson(jsonData, new TypeToken<List<GetCourse>>() {
         }.getType());
         list2 = new ArrayList<>();
@@ -179,6 +184,33 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
             getcourse.setTeacher(data.getTeacher());
             list2.add(getcourse);
         }
+    }
+
+    //解析课表JSON数据
+    private void parseJSONWithGSON3(String jsonData) {
+        try {
+            JSONArray jsonArray = new JSONArray(jsonData);
+            GetCourse getcourse = null;
+            list2 = new ArrayList<>();
+            for (int i = 0; i < jsonArray.length(); i++) {
+                JSONObject jsonObject = jsonArray.getJSONObject(i);
+                if (jsonObject != null) {
+                    getcourse = new GetCourse();
+                    getcourse.setClazz(jsonObject.getString("clazz"));
+                    getcourse.setCourseName(jsonObject.getString("courseName"));
+                    getcourse.setTeacher(jsonObject.getString("teacher"));
+                } else {
+                    getcourse = new GetCourse();
+                    getcourse.setClazz("");
+                    getcourse.setCourseName("");
+                    getcourse.setTeacher("");
+                }
+                list2.add(getcourse);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -283,6 +315,42 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 //        wu_1112_1.setText(list2.get(29).getClazz());
 //        wu_1112_2.setText(list2.get(29).getCourseName());
 //        wu_1112_3.setText(list2.get(29).getTeacher());
+//        liu_12_1.setText(list2.get(30).getClazz());
+//        liu_12_2.setText(list2.get(30).getCourseName());
+//        liu_12_3.setText(list2.get(30).getTeacher());
+//        liu_34_1.setText(list2.get(31).getClazz());
+//        liu_34_2.setText(list2.get(31).getCourseName());
+//        liu_34_3.setText(list2.get(31).getTeacher());
+//        liu_56_1.setText(list2.get(32).getClazz());
+//        liu_56_2.setText(list2.get(32).getCourseName());
+//        liu_56_3.setText(list2.get(32).getTeacher());
+//        liu_78_1.setText(list2.get(33).getClazz());
+//        liu_78_2.setText(list2.get(33).getCourseName());
+//        liu_78_3.setText(list2.get(33).getTeacher());
+//        liu_910_1.setText(list2.get(34).getClazz());
+//        liu_910_2.setText(list2.get(34).getCourseName());
+//        liu_910_3.setText(list2.get(34).getTeacher());
+//        liu_1112_1.setText(list2.get(35).getClazz());
+//        liu_1112_2.setText(list2.get(35).getCourseName());
+//        liu_1112_3.setText(list2.get(35).getTeacher());
+//        qi_12_1.setText(list2.get(36).getClazz());
+//        qi_12_2.setText(list2.get(36).getCourseName());
+//        qi_12_3.setText(list2.get(36).getTeacher());
+//        qi_34_1.setText(list2.get(37).getClazz());
+//        qi_34_2.setText(list2.get(37).getCourseName());
+//        qi_34_3.setText(list2.get(37).getTeacher());
+//        qi_56_1.setText(list2.get(38).getClazz());
+//        qi_56_2.setText(list2.get(38).getCourseName());
+//        qi_56_3.setText(list2.get(38).getTeacher());
+//        qi_78_1.setText(list2.get(39).getClazz());
+//        qi_78_2.setText(list2.get(39).getCourseName());
+//        qi_78_3.setText(list2.get(39).getTeacher());
+//        qi_910_1.setText(list2.get(40).getClazz());
+//        qi_910_2.setText(list2.get(40).getCourseName());
+//        qi_910_3.setText(list2.get(40).getTeacher());
+//        qi_1112_1.setText(list2.get(41).getClazz());
+//        qi_1112_2.setText(list2.get(41).getCourseName());
+//        qi_1112_3.setText(list2.get(41).getTeacher());
     }
 
     public class TimeThread extends Thread {

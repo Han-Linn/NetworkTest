@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal">
@@ -249,6 +250,59 @@
 
 
                 </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/course_margin"
+                        android:gravity="center"
+                        android:text="星期六"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/course_margin"
+                        android:gravity="center"
+                        android:text="星期天"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -473,7 +527,6 @@
                     <TextView
                         android:id="@+id/si_12_1"
                         android:layout_width="match_parent"
-
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/course_margin"
                         android:layout_marginTop="@dimen/course_margin"
@@ -555,6 +608,118 @@
 
                     <TextView
                         android:id="@+id/wu_12_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_12_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_12_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_12_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_12_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_12_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_12_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/course_margin"
@@ -888,6 +1053,118 @@
                         android:textSize="@dimen/course_textSize" />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_34_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_34_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_34_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_34_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_34_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_34_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
 
 
         </TableRow>
@@ -897,7 +1174,6 @@
             android:layout_height="match_parent"
             android:background="@color/black">
 
-            <!--第一行 第一列-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -1193,6 +1469,118 @@
 
                     <TextView
                         android:id="@+id/wu_56_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_56_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_56_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_56_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_56_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_56_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_56_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/course_margin"
@@ -1511,6 +1899,118 @@
 
                     <TextView
                         android:id="@+id/wu_78_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_78_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_78_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_78_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_78_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_78_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_78_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/course_margin"
@@ -1844,6 +2344,118 @@
                         android:textSize="@dimen/course_textSize" />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_910_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_910_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_910_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_910_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_910_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_910_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
 
 
         </TableRow>
@@ -2155,6 +2767,118 @@
 
                     <TextView
                         android:id="@+id/wu_1112_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:layout_marginBottom="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/liu_1112_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_1112_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/liu_1112_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_marginBottom="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="杨钟瑾(2-13,15-16周)"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/course_right"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/course_padding"
+                    android:layout_marginRight="@dimen/course_padding"
+                    android:layout_marginBottom="@dimen/course_padding"
+                    android:background="@android:color/background_light"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/qi_1112_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2015电子商务1班"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_1112_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/course_margin"
+                        android:layout_marginTop="@dimen/course_margin"
+                        android:layout_marginRight="@dimen/course_margin"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="管理运筹学"
+                        android:textColor="@color/course_textColor"
+                        android:textSize="@dimen/course_textSize" />
+
+                    <TextView
+                        android:id="@+id/qi_1112_3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/course_margin"
