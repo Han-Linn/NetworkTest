@@ -18,11 +18,6 @@
             <option value="$PROJECT_DIR$/Chapter08" />
             <option value="$PROJECT_DIR$/Chapter08_RemoteServiceClient" />
             <option value="$PROJECT_DIR$/Chapter09" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/app2" />
-            <option value="$PROJECT_DIR$/apptest" />
-            <option value="$PROJECT_DIR$/edittextdemo" />
-            <option value="$PROJECT_DIR$/testProvince" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
