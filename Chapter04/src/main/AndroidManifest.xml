@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qst.chapter04">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/daxiong2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.Activity_Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.ActionBarDemoActivity"/>
+        <activity android:name=".activity.ContextMenuDemoActivity"/>
+        <activity android:name=".activity.FragmentDemoActivity"/>
+        <activity android:name=".activity.FragmentLifecircleActivity"/>
+        <activity android:name=".activity.GridViewDemoActivity"/>
+        <activity android:name=".activity.ListActivityDemo"/>
+        <activity android:name=".activity.ListVewImageDemoActivity"/>
+        <activity android:name=".activity.ListVewSimpleDemoActivity"/>
+        <activity android:name=".activity.ListViewDemoActivity"/>
+        <activity android:name=".activity.MenuDemoActivity"/>
+        <activity android:name=".activity.ProviderActivityDemo"/>
+        <activity android:name=".activity.SubMenuDemoActivity"/>
+        <activity android:name=".activity.TabDemoActivity"/>
+        <activity android:name=".activity.TabHostDemo1Activity"/>
+        <activity android:name=".activity.TabHostDemo2Activity"/>
+        <activity android:name=".activity.ToolbarActivity"/>
+        <activity android:name=".activity.WebViewDemoActivity"/>
+        <activity android:name=".activity.XMLContextMenuDemoActivity"/>
+
+    </application>
+
+</manifest>

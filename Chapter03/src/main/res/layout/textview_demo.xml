@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- 设置字号为20sp -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView演示"
+        android:textSize="20sp" />
+    <!-- 设置中间省略，所有字母大写，字号为20sp，内容一行 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:singleLine="true"
+        android:text="TextView演示TextView演示TextView演示TextView演示TextView演示TextView演示TextView演示"
+        android:textAllCaps="true"
+        android:textSize="20sp" />
+    <!-- 邮件、电话添加链接 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autoLink="email|phone"
+        android:singleLine="true"
+        android:text="邮件：qst@163.com 电话：053212345678"
+        android:textSize="20sp" />
+  <!-- 测试密码框 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView演示"
+        android:password="true"
+        android:textSize="20sp" />
+</LinearLayout>

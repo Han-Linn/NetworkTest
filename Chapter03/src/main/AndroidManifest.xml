@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.qst.chapter03">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/daxiong2"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activity_Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AnonymousBtnActivity"/>
+        <activity android:name=".BindTagActivity"/>
+        <activity android:name=".CheckBoxDemoActivity"/>
+        <activity android:name=".DialogDemoActivity"/>
+        <activity android:name=".EditTextDemoActivity"/>
+        <activity android:name=".EventBtnActivity"/>
+        <activity android:name=".FocusEventActivity"/>
+        <activity android:name=".ImageViewDemoActivity"/>
+        <activity android:name=".InnerClassBtnActivity"/>
+        <activity android:name=".KeyTouchActivity"/>
+        <activity android:name=".KeyDownActivity"/>
+        <activity android:name=".LayoutActivity"/>
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".ProgressDemoActivity"/>
+        <activity android:name=".RadioButtonActivity"/>
+        <activity android:name=".SwitchDemoActivity"/>
+        <activity android:name=".TextViewDemoActivity"/>
+        <activity android:name=".ToggleButtonDemoActivity"/>
+    </application>
+
+</manifest>

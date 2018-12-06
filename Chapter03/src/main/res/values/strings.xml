@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chapter03</string>
+    <string name="title">你喜欢的运动是：</string>
+    <string name="football">足球</string>
+    <string name="basketball">篮球</string>
+    <string name="volleyball">排球</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:id="@+id/text1"
+    style="?android:attr/dropDownItemStyle"
+    android:textColor="#fff"
+    android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:ellipsize="marquee" />
+<!-- 
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/text1"
+    android:textColor="#fff"
+    android:background="#696969"
+    android:layout_width="60sp"
+    android:layout_height="match_parent"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:gravity="center_vertical"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+/> -->

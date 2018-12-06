@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+      <!-- 文本展示 -->
+      <TextView
+            android:id="@+id/tvSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已开启"
+            android:textColor="@android:color/black"
+            android:textSize="14.0sp" />
+      <!-- 定义ToggleButton对象 -->
+    <ToggleButton
+        android:id="@+id/tglSound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/selector_btn_toggle"
+        android:checked="true"
+        android:text=""
+        android:textOff=""
+        android:textOn="" />
+</LinearLayout>

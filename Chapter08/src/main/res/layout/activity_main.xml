@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/startButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="启动MyService2" />
+
+            <Button
+                android:id="@+id/stopButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="停止MyService2" />
+
+            <Button
+                android:id="@+id/bindButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="绑定MyService3" />
+
+            <Button
+                android:id="@+id/operateButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="操作MyService3" />
+
+            <Button
+                android:id="@+id/unbindButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="解绑MyService3" />
+
+            <Button
+                android:id="@+id/start4Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="启动MyService4" />
+
+            <Button
+                android:id="@+id/stop4Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="停止MyService4" />
+
+            <Button
+                android:id="@+id/bind4Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="绑定MyService4" />
+
+            <Button
+                android:id="@+id/unbind4Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="解绑MyService4" />
+
+            <Button
+                android:id="@+id/start5Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="前台启动MyService5" />
+
+            <Button
+                android:id="@+id/stop5Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="停止MyService5" />
+
+            <Button
+                android:id="@+id/bind5Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="前台绑定MyService5" />
+
+            <Button
+                android:id="@+id/progress5Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="开始MyService5进度" />
+
+            <Button
+                android:id="@+id/start6Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="启动MyService6" />
+
+            <Button
+                android:id="@+id/stop6Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="停止MyService6" />
+
+            <Button
+                android:id="@+id/start7Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="启动MyService7" />
+
+            <Button
+                android:id="@+id/notificationManagerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:textAllCaps="false"
+                android:text="NotificationManager" />
+
+            <Button
+                android:id="@+id/downloadManagerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="DownloadManager" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical" >
+   <!-- 显示选择的内容  -->
+    <TextView
+        android:id="@+id/chooseTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我选择的是...?"
+        android:textColor="#000"
+        android:textSize="30sp" />
+    <!-- 单选按钮组 -->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RadioButton
+            android:id="@+id/radioButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableRight="@android:drawable/btn_radio"
+            android:text="按钮1" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="按钮2" />
+    </RadioGroup>
+    <!-- 清除所有选中状态 -->
+    <Button
+        android:id="@+id/radio_clearBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="清除选中" />
+    <!-- 往按钮组中添加新的单选按钮 -->
+    <Button
+        android:id="@+id/radio_addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="添加子项" />
+
+</LinearLayout>

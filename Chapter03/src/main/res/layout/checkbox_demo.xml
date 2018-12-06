@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- 基本显示 -->
+    <TextView    
+        android:layout_width="match_parent"   
+        android:layout_height="wrap_content"   
+        android:text="@string/title"
+        android:textSize="20sp" 
+        android:textStyle="bold" 
+        android:textColor="#000000" 
+        /> 
+    <!-- 足球 -->
+    <CheckBox 
+        android:id="@+id/footballChx" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/football" 
+        android:textSize="16sp" 
+        /> 
+    <!-- 篮球 -->
+    <CheckBox 
+        android:id="@+id/basketballChx" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/basketball" 
+        android:textSize="16sp" 
+        /> 
+    <!-- 排球 -->
+    <CheckBox 
+        android:id="@+id/volleyballChx" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="@string/volleyball" 
+        android:textSize="16sp" 
+        />        
+
+</LinearLayout>
