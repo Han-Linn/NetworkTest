@@ -1,0 +1,12 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="course_padding">1dp</dimen><!--课表边框粗细-->
+    <dimen name="course_margin">3dp</dimen><!--课表内字体与字体的距离-->
+    <dimen name="course_textSize">5sp</dimen><!--课表字体大小-->
+    <dimen name="course_left">30dp</dimen> <!--课表左边宽度-->
+    <dimen name="course_right">50dp</dimen><!--课表右边宽度-->
+    <dimen name="course_margin2">20dp</dimen><!--整个课表距离右边和左边的距离-->
+    <dimen name="course_margin3">30dp</dimen><!--左边字体距离左边的距离-->
+</resources>
