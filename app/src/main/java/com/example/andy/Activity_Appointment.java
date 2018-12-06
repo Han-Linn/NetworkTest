@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.networktest.App;
+import com.example.andy.JavaBean.App;
 import com.example.networktest.HttpCallbackListener;
 import com.example.networktest.HttpUtil;
 import com.example.networktest.R;
@@ -20,7 +20,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
@@ -31,6 +30,7 @@ import okhttp3.Response;
 
 public class Activity_Appointment extends AppCompatActivity implements View.OnClickListener {
     private List<Map> list;
+    private List<App> list2;
     ListView responseText;
     private Button button1, button2, button3, button4, button5,
             button6, button7, button8, button9, button10, button11;
@@ -278,22 +278,30 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
         Gson gson = new Gson();
         List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {
         }.getType());
-        list = new ArrayList<>();
-        for (App app : appList) {
-//            Log.d("Activity_Appointment", "addr is " + app.getAddr());
-//            Log.d("Activity_Appointment", "appointMan is " + app.getAppointMan());
-//            Log.d("Activity_Appointment", "createTime is " + app.getCreateTime());
-//            Log.d("Activity_Appointment", "startTime is " + app.getStartTime());
-//            Log.d("Activity_Appointment", "endTime is " + app.getEndTime());
-//            Log.d("Activity_Appointment", "reason is " + app.getReason());
-            Map<String, String> map = new HashMap<>();
-            map.put("addr", app.getAddr());
-            map.put("appointMan", app.getAppointMan());
-            map.put("createTime", app.getCreateTime());
-            map.put("startTime", app.getStartTime());
-            map.put("endTime", app.getEndTime());
-            map.put("reason", app.getReason());
-            list.add(map);
+
+//        list = new ArrayList<>();
+//        for (App app : appList) {
+//            Map<String, String> map = new HashMap<>();
+//            map.put("addr", app.getAddr());
+//            map.put("appointMan", app.getAppointMan());
+//            map.put("createTime", app.getCreateTime());
+//            map.put("startTime", app.getStartTime());
+//            map.put("endTime", app.getEndTime());
+//            map.put("reason", app.getReason());
+//            list.add(map);
+//        }
+
+        list2 = new ArrayList<>();
+        App app = null;
+        for (App data : appList) {
+            app = new App();
+            app.setAppointMan(data.getAppointMan());
+            app.setCreateTime(data.getCreateTime());
+            app.setStartTime(data.getStartTime());
+            app.setAddr(data.getAddr());
+            app.setEndTime(data.getEndTime());
+            app.setReason(data.getReason());
+            list2.add(app);
         }
     }
 
@@ -310,7 +318,7 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
             public void run() {
                 // 在这里进行UI操作，将结果显示到界面上
 //                responseText.setText(response);
-                ListAdapter adapter = new ListAdapter(Activity_Appointment.this, list);
+                ListAdapter adapter = new ListAdapter(Activity_Appointment.this, list2);
                 responseText.setAdapter(adapter);
             }
         });

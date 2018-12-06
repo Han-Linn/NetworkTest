@@ -10,11 +10,13 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
 import com.example.andy.JavaBean.SendCourse;
+import com.example.andy.Utils.NullStringToEmptyAdapterFactory;
 import com.example.networktest.App;
 import com.example.networktest.HttpCallbackListener;
 import com.example.networktest.HttpUtil;
 import com.example.networktest.R;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
@@ -66,7 +68,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
             public void run() {
                 try {
                     Thread.sleep(1000);
-//                    sendOkHttpRequest();
+                    sendOkHttpRequest();
 //                    sendHttpRequest();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -117,9 +119,9 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
-                        String jsondata = response.body().string().substring(11, response.body()
-                                .string().length() - 30);
-                        parseJSONWithGSON2(jsondata);//得到list数据
+                        String jsondata = response.body().string();
+                            parseJSONWithGSON2(jsondata.substring(11, jsondata.length() - 31));
+                        //得到list数据
                         showResponse();
                     }
                 });
@@ -165,16 +167,16 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
     //解析课表JSON数据
     private void parseJSONWithGSON2(String jsonData) {
-        Gson gson = new Gson();
+        Gson gson  = new Gson();
         List<GetCourse> appList = gson.fromJson(jsonData, new TypeToken<List<GetCourse>>() {
         }.getType());
         list2 = new ArrayList<>();
         GetCourse getcourse = null;
-        for (GetCourse app : appList) {
+        for (GetCourse data : appList) {
             getcourse = new GetCourse();
-            getcourse.setClazz(app.getClazz());
-            getcourse.setCourseName(app.getCourseName());
-            getcourse.setTeacher(app.getTeacher());
+            getcourse.setClazz(data.getClazz());
+            getcourse.setCourseName(data.getCourseName());
+            getcourse.setTeacher(data.getTeacher());
             list2.add(getcourse);
         }
     }

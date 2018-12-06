@@ -14,6 +14,10 @@ public class App {
 
     private String startTime;
 
+    public App() {
+
+    }
+
     public String getStartTime() {
         return startTime;
     }
@@ -61,9 +65,6 @@ public class App {
     public void setReason(String reason) {
         this.reason = reason;
     }
-
-
-
 
 
 }

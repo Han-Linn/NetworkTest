@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.andy.JavaBean.App;
 import com.example.networktest.R;
 
 import java.util.List;
@@ -14,9 +15,9 @@ import java.util.Map;
 
 public class ListAdapter extends BaseAdapter {
     private Context context;
-    private List<Map> list;
+    private List<App> list;
 
-    public ListAdapter(Context context, List<Map> dataList) {
+    public ListAdapter(Context context, List<App> dataList) {
         this.context = context;
         this.list = dataList;
     }
@@ -56,10 +57,16 @@ public class ListAdapter extends BaseAdapter {
             viewholder = (ViewHolder) convertView.getTag();
         }
 
-        String Name = list.get(position).get("addr").toString();
-        String DateTime1 = list.get(position).get("startTime").toString();
-        String DateTime2 = list.get(position).get("endTime").toString();
-        String Name_AppointMan = list.get(position).get("appointMan").toString();
+//        String Name = list.get(position).get("addr").toString();
+//        String DateTime1 = list.get(position).get("startTime").toString();
+//        String DateTime2 = list.get(position).get("endTime").toString();
+//        String Name_AppointMan = list.get(position).get("appointMan").toString();
+
+        String Name = list.get(position).getAddr();
+        String DateTime1 = list.get(position).getStartTime();
+        String DateTime2 = list.get(position).getEndTime();
+        String Name_AppointMan = list.get(position).getAppointMan();
+
         viewholder.Name_Theme.setText(Name);
         viewholder.DateTime1.setText(DateTime1);
         viewholder.DateTime2.setText(DateTime2);
