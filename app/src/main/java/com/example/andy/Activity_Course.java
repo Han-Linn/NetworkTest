@@ -97,17 +97,6 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
             map.put("zc1","13");
             map.put("zc2","13");
 
-        HttpUtil.sendHttpRequest(url, new HttpCallbackListener() {
-                    @Override
-                    public void onFinish(String response) {
-                        Log.d("Activity_Course第一", "---" + response.length());
-                    }
-
-                    @Override
-                    public void onError(Exception e) {
-                    }
-                });
-
         HttpUtli2.postRequest(url, map, encode, new OnResponseListner() {
             @Override
             public void onSucess(String response) {
