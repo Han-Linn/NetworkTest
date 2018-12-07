@@ -12,6 +12,7 @@ import java.util.Map;
 import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 //封装发送Http请求获取数据
@@ -56,11 +57,23 @@ public class HttpUtil {
         }).start();
     }
 
-    //使用OkHttp发送请求
+    //使用OkHttp发送GET请求
     public static void sendOkHttpRequest(final String address, final okhttp3.Callback callback) {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(address)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
+
+    //使用OkHttp发送POST请求
+    public static void sendOkHttpRequest2(final String address,  RequestBody requestBody,final okhttp3.Callback callback) {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder()
+                .url(address)
+                .addHeader("Content-Type","application/json;charset=UTF-8")
+//                .addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
+                .post(requestBody)
                 .build();
         client.newCall(request).enqueue(callback);
     }

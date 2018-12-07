@@ -10,9 +10,8 @@ import java.util.Map;
 
 //网上封装方法（待学习）
 public class HttpUtli2 {
-    /**
-     *get请求封装
-     */
+
+    //GET封装方法
     public static void getRequest(String url, Map<String,String> params, String encode, OnResponseListner listner) {
         StringBuffer sb = new StringBuffer(url);
         sb.append("?");
@@ -45,9 +44,7 @@ public class HttpUtli2 {
         }
     }
 
-    /**
-     * POST请求
-     */
+    //POST封装方法
     public static void postRequest(String url,Map<String,String> params,String encode,OnResponseListner listner){
         StringBuffer sb = new StringBuffer();
         if (params!=null && !params.isEmpty()){
@@ -63,6 +60,40 @@ public class HttpUtli2 {
                     HttpURLConnection con = (HttpURLConnection) path.openConnection();
                     con.setRequestMethod("POST");   //设置请求方法POST
                     con.setConnectTimeout(3000);
+                    con.setDoOutput(true);
+                    con.setDoInput(true);
+                    byte[] bytes = sb.toString().getBytes();
+                    OutputStream outputStream = con.getOutputStream();
+                    outputStream.write(bytes);
+                    outputStream.close();
+                    if (con.getResponseCode()==200){
+                        onSucessResopond(encode, listner,  con);
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                onError(listner, e);
+            }
+        }
+    }
+
+    //POST封装方法设置请求头
+    public static void postRequest2(String url,Map<String,String> params,String encode,OnResponseListner listner){
+        StringBuffer sb = new StringBuffer();
+        if (params!=null && !params.isEmpty()){
+            for (Map.Entry<String,String> entry: params.entrySet()) {
+                sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+            }
+            sb.deleteCharAt(sb.length()-1);
+        }
+        if (listner!=null) {
+            try {
+                URL path = new URL(url);
+                if (path!=null){
+                    HttpURLConnection con = (HttpURLConnection) path.openConnection();
+                    con.setRequestMethod("POST");   //设置请求方法POST
+                    con.setConnectTimeout(3000);
+                    con.setRequestProperty("Content-Type","application/json");
                     con.setDoOutput(true);
                     con.setDoInput(true);
                     byte[] bytes = sb.toString().getBytes();

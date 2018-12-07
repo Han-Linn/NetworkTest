@@ -12,40 +12,22 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
 import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Http.HttpCallbackListener;
 import com.example.andy.Util_Http.HttpUtil;
 import com.example.andy.Util_Http.HttpUtli2;
-import com.example.andy.Util_Http.HttpUtli_Course;
 import com.example.andy.Util_Http.OnResponseListner;
-import com.example.andy.Util_Parse.Utility;
 import com.example.networktest.R;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.TimeZone;
 
-import okhttp3.FormBody;
-import okhttp3.MediaType;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.RequestBody;
+import okhttp3.Call;
 import okhttp3.Response;
 
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
     private List<GetCourse> list;
-    private Button oppointment;
+    private Button appointment;
     private TextView yi_12_1, yi_12_2, yi_12_3, yi_34_1, yi_34_2, yi_34_3, yi_56_1, yi_56_2,
             yi_56_3, yi_78_1, yi_78_2, yi_78_3, yi_910_1, yi_910_2, yi_910_3, yi_1112_1, yi_1112_2,
             yi_1112_3, er_12_1, er_12_2, er_12_3, er_34_1, er_34_2, er_34_3, er_56_1, er_56_2,
@@ -80,6 +62,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
+                    sendOkHttpRequest2();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -89,7 +72,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     }
 
     private void setOnclick() {
-        oppointment.setOnClickListener(this);
+        appointment.setOnClickListener(this);
     }
 
     @Override
@@ -102,19 +85,35 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    //请求Http获取课表数据
+    //获取课表数据1
     private void sendOkHttpRequest() {
         final SendCourse sc = new SendCourse();
-        HttpUtli_Course.getRequest(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
+        HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
             @Override
             public void onSucess(String response) {
-                Log.d("Activity_Course第二","---"+sc.getMap().get("username"));
-                Log.d("Activity_Course第二", "---" + response);
+                Log.d("Activity_Course第一", "---" + response);
             }
 
             @Override
             public void onError(String error) {
 
+            }
+        });
+    }
+
+    //获取课表数据2
+    private void sendOkHttpRequest2() {
+        final SendCourse sc = new SendCourse();
+        HttpUtil.sendOkHttpRequest2(sc.getUrl(), sc.getRequestBody(),new okhttp3.Callback() {
+            @Override
+            public void onFailure(Call call, IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+                String responseData = response.body().string();
+                Log.d("Activity_Course第二", "---" + responseData);
             }
         });
     }
@@ -177,7 +176,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     }
 
     private void init() {
-        oppointment = findViewById(R.id.oppointment);
+        appointment = findViewById(R.id.oppointment);
         SystemTime = findViewById(R.id.mytime);
         yi_12_1 = findViewById(R.id.yi_12_1);
         yi_12_2 = findViewById(R.id.yi_12_2);

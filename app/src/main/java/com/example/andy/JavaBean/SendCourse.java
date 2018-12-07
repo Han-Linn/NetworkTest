@@ -3,6 +3,9 @@ package com.example.andy.JavaBean;
 import java.util.HashMap;
 import java.util.Map;
 
+import okhttp3.FormBody;
+import okhttp3.RequestBody;
+
 public class SendCourse {
     private String USENAME = "931663592";
     private String PASSWORD = "zcoolshuai18O5";
@@ -12,9 +15,24 @@ public class SendCourse {
     private String classroom = "实验楼802";
     private String zc1 = "13";
     private String zc2 = "13";
-//    private String url = "http://ketansoft.com/kt_onlinemj/tbkc";
-    private String url = "http://2u271r1835.51mypc.cn:13683/kt_onlinemj/tbkc";
+    private String url = "http://ketansoft.com/kt_onlinemj/tbkc";
     private String encode = "utf-8";
+
+
+    public RequestBody getRequestBody(){
+        RequestBody requestBody = new FormBody.Builder()
+                .add("username",USENAME)
+                .add("password", PASSWORD)
+                .add("xnxqh", xnxqh)
+                .add("skyx", skyx)
+                .add("xqid", xqid)
+                .add("classroom", classroom)
+                .add("zc1", zc1)
+                .add("zc2", zc2)
+                .build();
+        return requestBody;
+    }
+
     public String getEncode() {
         return encode;
     }
