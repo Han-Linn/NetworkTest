@@ -11,17 +11,37 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
+import com.example.andy.JavaBean.SendCourse;
 import com.example.andy.Util_Http.HttpCallbackListener;
 import com.example.andy.Util_Http.HttpUtil;
 import com.example.andy.Util_Http.HttpUtli2;
+import com.example.andy.Util_Http.HttpUtli_Course;
 import com.example.andy.Util_Http.OnResponseListner;
+import com.example.andy.Util_Parse.Utility;
 import com.example.networktest.R;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
+
+import okhttp3.FormBody;
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
     private List<GetCourse> list;
@@ -60,7 +80,6 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
-                    sendHttpRequest();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -85,26 +104,12 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
     //请求Http获取课表数据
     private void sendOkHttpRequest() {
-        String url = "http://ketansoft.com/kt_onlinemj/tbkc";
-        String encode="utf-8";
-            Map<String,String> map=new HashMap<>();
-            map.put("username","931663592");
-            map.put("password","zcoolshuai18O5");
-            map.put("xnxqh","2018-2019-1");
-            map.put("skyx","11");
-            map.put("xqid","1");
-            map.put("classroom","实验楼802");
-            map.put("zc1","13");
-            map.put("zc2","13");
-
-        HttpUtli2.postRequest(url, map, encode, new OnResponseListner() {
+        final SendCourse sc = new SendCourse();
+        HttpUtli_Course.getRequest(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
             @Override
             public void onSucess(String response) {
-//                    response = response.substring(11, response.length() - 31);
-//                list = new Utility().parseJSONWithGSON2(response);
-                Log.d("Activity_Course第二", "---" + response.length());
-//                        Log.d("Activity_Course","++++++++++++++++++++++++++++++++++"+(list.get(3).getClazz()).length());
-                showResponse();//运用封装方法解析JSON数据得到list
+                Log.d("Activity_Course第二","---"+sc.getMap().get("username"));
+                Log.d("Activity_Course第二", "---" + response);
             }
 
             @Override
@@ -112,20 +117,6 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
             }
         });
-    }
-
-    private void sendHttpRequest() {
-        HttpUtil.sendHttpRequest("http://ketansoft.com/kt_onlinemj/mjappoint/appointList", new
-                HttpCallbackListener() {
-                    @Override
-                    public void onFinish(String response) {
-                        Log.d("Activity_Course第三", "---" + response.length());
-                    }
-
-                    @Override
-                    public void onError(Exception e) {
-                    }
-                });
     }
 
     //显示ListView
