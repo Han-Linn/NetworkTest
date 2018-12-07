@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
 import com.example.andy.JavaBean.SendCourse;
+import com.example.andy.Util_Http.HttpCallbackListener;
 import com.example.andy.Util_Http.HttpUtil;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
@@ -62,7 +63,8 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
-                    sendOkHttpRequest2();
+//                    sendOkHttpRequest2();
+//                    sendOkHttpRequest3();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -96,6 +98,21 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
             @Override
             public void onError(String error) {
+
+            }
+        });
+    }
+
+    private void sendOkHttpRequest3() {
+        final SendCourse sc = new SendCourse();
+        HttpUtil.sendHttpRequest("http://2u271r1835.51mypc.cn:13683/kt_onlinemj/tbkc?xnxqh=2018-2019-1&jzwid=S1&skyx=11&xqid=1&classroom=802&zc1=13&zc2=1", new HttpCallbackListener() {
+            @Override
+            public void onFinish(String response) {
+                Log.d("Activity_Course第三", "---" + response);
+            }
+
+            @Override
+            public void onError(Exception e) {
 
             }
         });

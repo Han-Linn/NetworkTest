@@ -5,15 +5,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
-import java.util.List;
-import java.util.Map;
 
-import okhttp3.Callback;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 //封装发送Http请求获取数据
 public class HttpUtil {
@@ -71,7 +66,7 @@ public class HttpUtil {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
                 .url(address)
-                .addHeader("Content-Type","application/json;charset=UTF-8")
+                .addHeader("Content-Type","application/json")
 //                .addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
                 .post(requestBody)
                 .build();
