@@ -60,16 +60,4 @@ public class HttpUtil {
                 .build();
         client.newCall(request).enqueue(callback);
     }
-
-    //使用OkHttp发送POST请求
-    public static void sendOkHttpRequest2(final String address,  RequestBody requestBody,final okhttp3.Callback callback) {
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(address)
-                .addHeader("Content-Type","application/json")
-//                .addHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8")
-                .post(requestBody)
-                .build();
-        client.newCall(request).enqueue(callback);
-    }
 }

@@ -16,6 +16,7 @@ import com.example.andy.Util_Http.HttpCallbackListener;
 import com.example.andy.Util_Http.HttpUtil;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
+import com.example.andy.Util_Parse.Utility;
 import com.example.networktest.R;
 
 import java.io.IOException;
@@ -63,8 +64,6 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
-//                    sendOkHttpRequest2();
-//                    sendOkHttpRequest3();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -93,7 +92,12 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
             @Override
             public void onSucess(String response) {
-                Log.d("Activity_Course第一", "---" + response);
+//                Log.d("Activity_Course第一", "------------------------" + response);
+                if (response.length() > 31) {
+                    list = Utility.parseJSONWithGSON2(response.substring(11, response.length() - 31));
+//                    Log.d("Activity_Course第一", "------------------------" + response.substring(11, response.length() - 31));
+                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getCourseName());
+                }
             }
 
             @Override
@@ -103,37 +107,6 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         });
     }
 
-    private void sendOkHttpRequest3() {
-        final SendCourse sc = new SendCourse();
-        HttpUtil.sendHttpRequest("http://2u271r1835.51mypc.cn:13683/kt_onlinemj/tbkc?xnxqh=2018-2019-1&jzwid=S1&skyx=11&xqid=1&classroom=802&zc1=13&zc2=1", new HttpCallbackListener() {
-            @Override
-            public void onFinish(String response) {
-                Log.d("Activity_Course第三", "---" + response);
-            }
-
-            @Override
-            public void onError(Exception e) {
-
-            }
-        });
-    }
-
-    //获取课表数据2
-    private void sendOkHttpRequest2() {
-        final SendCourse sc = new SendCourse();
-        HttpUtil.sendOkHttpRequest2(sc.getUrl(), sc.getRequestBody(),new okhttp3.Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String responseData = response.body().string();
-                Log.d("Activity_Course第二", "---" + responseData);
-            }
-        });
-    }
 
     //显示ListView
     private void showResponse() {

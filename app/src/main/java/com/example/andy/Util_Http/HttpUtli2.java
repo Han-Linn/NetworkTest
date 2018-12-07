@@ -1,10 +1,7 @@
 package com.example.andy.Util_Http;
 
-import com.example.andy.JavaBean.Param;
 import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.JavaBean.SendCourse2;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -12,25 +9,24 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Map;
 
-//网上封装方法（待学习）
 public class HttpUtli2 {
 
     //GET封装方法
-    public static void getRequest(String url, Map<String,String> params, String encode, OnResponseListner listner) {
+    public static void getRequest(String url, Map<String, String> params, String encode,
+                                  OnResponseListner listner) {
         StringBuffer sb = new StringBuffer(url);
         sb.append("?");
-        if (params!=null && !params.isEmpty()){
-            for (Map.Entry<String,String> entry:params.entrySet()) {    //增强for遍历循环添加拼接请求内容
+        if (params != null && !params.isEmpty()) {
+            for (Map.Entry<String, String> entry : params.entrySet()) {    //增强for遍历循环添加拼接请求内容
                 sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
             }
-            sb.deleteCharAt(sb.length()-1);
-            if (listner!=null) {
+            sb.deleteCharAt(sb.length() - 1);
+            if (listner != null) {
                 try {
                     URL path = new URL(sb.toString());
-                    if (path!=null) {
+                    if (path != null) {
                         HttpURLConnection con = (HttpURLConnection) path.openConnection();
                         con.setRequestMethod("GET");    //设置请求方式
                         con.setConnectTimeout(3000);    //链接超时3秒
@@ -52,18 +48,19 @@ public class HttpUtli2 {
     }
 
     //POST封装方法
-    public static void postRequest(String url,Map<String,String> params,String encode,OnResponseListner listner){
+    public static void postRequest(String url, Map<String, String> params, String encode,
+                                   OnResponseListner listner) {
         StringBuffer sb = new StringBuffer();
-        if (params!=null && !params.isEmpty()){
-            for (Map.Entry<String,String> entry: params.entrySet()) {
+        if (params != null && !params.isEmpty()) {
+            for (Map.Entry<String, String> entry : params.entrySet()) {
                 sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
             }
-                sb.deleteCharAt(sb.length()-1);
+            sb.deleteCharAt(sb.length() - 1);
         }
-        if (listner!=null) {
+        if (listner != null) {
             try {
                 URL path = new URL(url);
-                if (path!=null){
+                if (path != null) {
                     HttpURLConnection con = (HttpURLConnection) path.openConnection();
                     con.setRequestMethod("POST");   //设置请求方法POST
                     con.setConnectTimeout(3000);
@@ -73,8 +70,8 @@ public class HttpUtli2 {
                     OutputStream outputStream = con.getOutputStream();
                     outputStream.write(bytes);
                     outputStream.close();
-                    if (con.getResponseCode()==200){
-                        onSucessResopond(encode, listner,  con);
+                    if (con.getResponseCode() == 200) {
+                        onSucessResopond(encode, listner, con);
                     }
                 }
             } catch (Exception e) {
@@ -85,56 +82,37 @@ public class HttpUtli2 {
     }
 
     //POST封装方法设置请求头
-    public static void postRequest2(String url,Map<String,String> params,String encode,OnResponseListner listner){
+    public static void postRequest2(String url, Map<String, String> params, String encode,
+                                    OnResponseListner listner) {
         Gson gson = new Gson();
-//        Param param = new Param();
-//        param.setClassroom("实验楼802");
-//        param.setZc1("12");
-//        param.setZc2("12");
-//        param.setJzwid("11");
-////        param.setPassword("zcoolshuai18O5");
-////        param.setUsername("16251101235");
-//        param.setXnxqh("2018-2019-1");
-//        param.setXqid("1");
-
-        Map<String ,String> map = new HashMap<>();
-        map.put("xnxqh","2018-2019-1");
-        map.put("skyx","11");
-        map.put("xqid","1");
-        map.put("classroom","802");
-        map.put("zc1","13");
-        map.put("zc2","13");
-        map.put("jzwid","S1");
-
         SendCourse sendCourse = new SendCourse();
-        String string = gson.toJson(map);
+        String data = gson.toJson(sendCourse.getMap());
 
-        StringBuffer sb = new StringBuffer();
-        if (params!=null && !params.isEmpty()){
-            for (Map.Entry<String,String> entry: params.entrySet()) {
-                sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
-            }
-            sb.deleteCharAt(sb.length()-1);
-        }
-        if (listner!=null) {
+//        StringBuffer sb = new StringBuffer();
+//        if (params!=null && !params.isEmpty()){
+//            for (Map.Entry<String,String> entry: params.entrySet()) {
+//                sb.append(entry.getKey()).append("=").append(entry.getValue()).append("&");
+//            }
+//            sb.deleteCharAt(sb.length()-1);
+//        }
+
+        if (listner != null) {
             try {
                 URL path = new URL(url);
-                if (path!=null){
+                if (path != null) {
                     HttpURLConnection con = (HttpURLConnection) path.openConnection();
                     con.setRequestMethod("POST");   //设置请求方法POST
                     con.setConnectTimeout(3000);
-                    con.setRequestProperty("Content-Type","application/json");
-                    con.setRequestProperty("Connection", "Keep-Alive");
-                    con.setRequestProperty("Accept", "*/*");
+                    con.setRequestProperty("Content-Type", "application/json");
                     con.setDoOutput(true);
                     con.setDoInput(true);
 //                    byte[] bytes = sb.toString().getBytes();
-                    byte[] bytes = string.getBytes();
+                    byte[] bytes = data.getBytes();
                     OutputStream outputStream = con.getOutputStream();
                     outputStream.write(bytes);
                     outputStream.close();
-                    if (con.getResponseCode()==200){
-                        onSucessResopond(encode, listner,  con);
+                    if (con.getResponseCode() == 200) {
+                        onSucessResopond(encode, listner, con);
                     }
                 }
             } catch (Exception e) {
@@ -144,11 +122,12 @@ public class HttpUtli2 {
         }
     }
 
-    private static void onError(OnResponseListner listner,Exception onError) {
+    private static void onError(OnResponseListner listner, Exception onError) {
         listner.onError(onError.toString());
     }
 
-    private static void onSucessResopond(String encode, OnResponseListner listner, HttpURLConnection con) throws IOException {
+    private static void onSucessResopond(String encode, OnResponseListner listner,
+                                         HttpURLConnection con) throws IOException {
         InputStream inputStream = con.getInputStream();
         ByteArrayOutputStream baos = new ByteArrayOutputStream();//创建内存输出流
         int len = 0;
