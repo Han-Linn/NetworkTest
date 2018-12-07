@@ -1,35 +1,31 @@
 package com.example.andy;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.andy.JavaBean.GetCourse;
 import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Http.HttpCallbackListener;
-import com.example.andy.Util_Http.HttpUtil;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
 import com.example.andy.Util_Parse.Utility;
 import com.example.networktest.R;
 
-import java.io.IOException;
 import java.util.Calendar;
 import java.util.List;
 import java.util.TimeZone;
 
-import okhttp3.Call;
-import okhttp3.Response;
-
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
     private List<GetCourse> list;
     private Button appointment;
+    private TextView date;
     private TextView yi_12_1, yi_12_2, yi_12_3, yi_34_1, yi_34_2, yi_34_3, yi_56_1, yi_56_2,
             yi_56_3, yi_78_1, yi_78_2, yi_78_3, yi_910_1, yi_910_2, yi_910_3, yi_1112_1, yi_1112_2,
             yi_1112_3, er_12_1, er_12_2, er_12_3, er_34_1, er_34_2, er_34_3, er_56_1, er_56_2,
@@ -54,6 +50,12 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去除状态栏
+        if(Build.VERSION.SDK_INT>21){
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(R.layout.course);
         init();
         setOnclick();
@@ -92,12 +94,13 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
             @Override
             public void onSucess(String response) {
-//                Log.d("Activity_Course第一", "------------------------" + response);
                 if (response.length() > 31) {
                     list = Utility.parseJSONWithGSON2(response.substring(11, response.length() - 31));
-//                    Log.d("Activity_Course第一", "------------------------" + response.substring(11, response.length() - 31));
-                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getCourseName());
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getClazz());
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getCourseName());
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getTeacher());
                 }
+                showResponse();
             }
 
             @Override
@@ -107,13 +110,23 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         });
     }
 
+    private String getTime() {
+        final Calendar c = Calendar.getInstance();
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
+        String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
+        String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
+        String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
+        return mYear + "年" + mMonth + "月" + mDay + "日";
+    }
 
-    //显示ListView
     private void showResponse() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                showText();
+                rigth_showText();
+                left_showText();
             }
         });
     }
@@ -168,6 +181,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     private void init() {
         appointment = findViewById(R.id.oppointment);
         SystemTime = findViewById(R.id.mytime);
+        date=findViewById(R.id.date);
         yi_12_1 = findViewById(R.id.yi_12_1);
         yi_12_2 = findViewById(R.id.yi_12_2);
         yi_12_3 = findViewById(R.id.yi_12_3);
@@ -296,7 +310,11 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         qi_1112_3 = findViewById(R.id.qi_1112_3);
     }
 
-    private void showText() {
+    private void left_showText(){
+        date.setText(getTime());
+    }
+
+    private void rigth_showText() {
         if (list.size() != 0) {
             yi_12_1.setText(list.get(0).getClazz());
             yi_12_2.setText(list.get(0).getCourseName());

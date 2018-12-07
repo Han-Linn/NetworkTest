@@ -11,6 +11,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Utility {
@@ -20,7 +21,8 @@ public class Utility {
         App app = null;
         Gson gson = new Gson();
         List<App> list = new ArrayList<>();
-        List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {}.getType());
+        List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {
+        }.getType());
         for (App data : appList) {
             app = new App();
             app.setAppointMan(data.getAppointMan());
@@ -30,7 +32,7 @@ public class Utility {
             app.setEndTime(data.getEndTime());
             app.setReason(data.getReason());
             list.add(app);
-          Log.d("Utility","-----------------"+app.getAppointMan());
+            Log.d("Utility", "-----------------" + app.getAppointMan());
         }
         return list;
 
@@ -51,52 +53,32 @@ public class Utility {
     //用JSONObject解析课表JSON数据
     public static List<GetCourse> parseJSONWithGSON2(String jsonData) {
         List<GetCourse> list = new ArrayList<>();
+        List<String> list_jsonArray = new LinkedList<>();
         try {
             JSONArray jsonArray = new JSONArray(jsonData);
-            Log.d("Utility", "------------------------" + jsonArray.length());
             GetCourse getcourse = null;
-            for (int i = 0; i < jsonArray.length(); i++) {
-//                JSONObject jsonObject = jsonArray.getJSONObject(i);
-//                jsonObject.length()
-//                if (jsonArray.getJSONObject(i).length()>0) {
-//                    getcourse = new GetCourse();
-//                    getcourse.setClazz(jsonObject.getString("clazz"));
-//                    getcourse.setCourseName(jsonObject.getString("courseName"));
-//                    getcourse.setTeacher(jsonObject.getString("teacher"));
-//                } else {
-//                    getcourse = new GetCourse();
-//                    getcourse.setClazz("");
-//                    getcourse.setCourseName("");
-//                    getcourse.setTeacher("");
-//                }
-//                getcourse = new GetCourse();
-//                getcourse.setClazz(jsonObject.getString("clazz"));
-//                getcourse.setCourseName(jsonObject.getString("courseName"));
-//                getcourse.setTeacher(jsonObject.getString("teacher"));
-//                list.add(getcourse);
+            String data = null;
+            for(int i = 0; i < jsonArray.length(); i++){
+                data = jsonArray.get(i).toString();
+                list_jsonArray.add(data);
             }
-            Log.d("Utility", "------------------------" + jsonArray.getJSONObject(2).length());
-            Log.d("Utility", "------------------------" + jsonArray.getJSONObject(2).getString("courseName"));
-            Log.d("Utility", "------------------------" + jsonArray.getJSONObject(0).length());
+
+            for (int i = 0; i < jsonArray.length(); i++) {
+                if (list_jsonArray.get(i).equals("null")) {
+                    getcourse = new GetCourse();
+                    getcourse.setClazz("");
+                    getcourse.setCourseName("");
+                    getcourse.setTeacher("");
+                } else {
+                    getcourse = new GetCourse();
+                    getcourse.setClazz(list_jsonArray.get(i).split("\\\"")[3]);
+                    getcourse.setCourseName(list_jsonArray.get(i).split("\\\"")[7]);
+                    getcourse.setTeacher(list_jsonArray.get(i).split("\\\"")[11]);
+                }
+                list.add(getcourse);
+            }
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        return list;
-    }
-
-    //用GSON解析课表JSON数据
-    public static List<GetCourse> parseJSONWithGSON3(String jsonData) {
-        Gson gson = new Gson();
-        GetCourse getCourse = null;
-        List<GetCourse> list = new ArrayList<>();
-        List<GetCourse> appList = gson.fromJson(jsonData, new TypeToken<List<GetCourse>>() {}.getType());
-        for (GetCourse data : appList) {
-            getCourse = new GetCourse();
-            getCourse.setCourseName(data.getCourseName());
-            getCourse.setClazz(data.getClazz());
-            getCourse.setTeacher(data.getTeacher());
-            list.add(getCourse);
-            Log.d("Utility", "-----------------" + getCourse.getCourseName());
         }
         return list;
     }

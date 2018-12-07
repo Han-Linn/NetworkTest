@@ -1,5 +1,7 @@
 package com.example.andy;
 
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -34,18 +36,23 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
     private ImageView imageView1, imageView2, imageView3, imageView4,
             imageView5, imageView6;
     private StringBuilder password;
-    private TextView textView;
     private static final int msgKey1 = 1;
     private TextView SystemTime;//定义一个获取系统日期的变量
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去除状态栏
+        if(Build.VERSION.SDK_INT>21){
+            View decorView = getWindow().getDecorView();
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            getWindow().setStatusBarColor(Color.TRANSPARENT);
+        }
         setContentView(R.layout.appointment);
         init();
         setOnclick();
         setImage();
-        new TimeThread().start(); //启动新线程
+//        new TimeThread().start(); //启动新线程
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -67,7 +74,7 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
                     @Override
                     public void onFinish(String response) {
                         response = response.substring(21, response.length() - 1);
-                        listapp = new Utility().parseJSONWithGSON1(response);//使用封装方法解析JSON数据获得list
+                        listapp = Utility.parseJSONWithGSON1(response);//使用封装方法解析JSON数据获得list
                         showResponse();
                     }
 
@@ -85,8 +92,20 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
 //                responseText.setText(response);
                 ListAdapter adapter = new ListAdapter(Activity_Appointment.this, listapp);
                 responseText.setAdapter(adapter);
+                SystemTime.setText(getTime());
             }
         });
+    }
+
+    private String getTime() {
+        final Calendar c = Calendar.getInstance();
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
+        String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
+        String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
+        String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
+        String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
+        return mYear + "年" + mMonth + "月" + mDay + "日";
     }
 
     public class TimeThread extends Thread {
@@ -128,7 +147,6 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
             String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
             String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
             String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
-
             return mYear + "年" + mMonth + "月" + mDay + "日";
         }
 
