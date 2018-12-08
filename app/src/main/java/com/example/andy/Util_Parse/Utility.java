@@ -2,7 +2,7 @@ package com.example.andy.Util_Parse;
 
 import android.util.Log;
 
-import com.example.andy.Util_Get.GetCourse;
+import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.App;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -50,12 +50,12 @@ public class Utility {
 
 
     //用JSONObject解析课表JSON数据
-    public static List<GetCourse> parseJSONWithGSON2(String jsonData) {
-        List<GetCourse> list = new ArrayList<>();
+    public static List<Course> parseJSONWithGSON2(String jsonData) {
+        List<Course> list = new ArrayList<>();
         List<String> list_jsonArray = new LinkedList<>();
         try {
             JSONArray jsonArray = new JSONArray(jsonData);
-            GetCourse getcourse = null;
+            Course getcourse = null;
             String data = null;
             for(int i = 0; i < jsonArray.length(); i++){
                 data = jsonArray.get(i).toString();
@@ -64,12 +64,12 @@ public class Utility {
 
             for (int i = 0; i < jsonArray.length(); i++) {
                 if (list_jsonArray.get(i).equals("null")) {
-                    getcourse = new GetCourse();
+                    getcourse = new Course();
                     getcourse.setClazz("");
                     getcourse.setCourseName("");
                     getcourse.setTeacher("");
                 } else {
-                    getcourse = new GetCourse();
+                    getcourse = new Course();
                     getcourse.setClazz(list_jsonArray.get(i).split("\\\"")[3]);
                     getcourse.setCourseName(list_jsonArray.get(i).split("\\\"")[7]);
                     getcourse.setTeacher(list_jsonArray.get(i).split("\\\"")[11]);

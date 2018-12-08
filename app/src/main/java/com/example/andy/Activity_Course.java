@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.andy.Util_Get.GetCourse;
+import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.SendCourse;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.TimeZone;
 
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
-    private List<GetCourse> list;
+    private List<Course> list;
     private Button appointment;
     private TextView date;
     private TextView yi_12_1, yi_12_2, yi_12_3, yi_34_1, yi_34_2, yi_34_3, yi_56_1, yi_56_2,
