@@ -2,13 +2,12 @@ package com.example.andy.Util_Parse;
 
 import android.util.Log;
 
-import com.example.andy.JavaBean.GetCourse;
+import com.example.andy.Util_Get.GetCourse;
 import com.example.andy.JavaBean.App;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

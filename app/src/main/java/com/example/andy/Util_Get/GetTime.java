@@ -1,10 +1,10 @@
-package com.example.andy;
+package com.example.andy.Util_Get;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class getTime {
+public class GetTime {
     private Date startDate;
     //获取 X月X日的Date对象，两个恶Date比较，不相等的时候在日期
     // 显示XXXX.XX.XX - XXXX.XX.XX，相等则显示XXXX.XX.XX

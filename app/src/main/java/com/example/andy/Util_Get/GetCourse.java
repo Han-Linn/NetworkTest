@@ -1,4 +1,4 @@
-package com.example.andy.JavaBean;
+package com.example.andy.Util_Get;
 
 import org.litepal.crud.DataSupport;
 

@@ -11,7 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.andy.JavaBean.GetCourse;
+import com.example.andy.Util_Get.GetCourse;
 import com.example.andy.JavaBean.SendCourse;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
