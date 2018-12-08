@@ -88,7 +88,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         }
     }
 
-    //获取课表数据1
+    //获取课表数据
     private void sendOkHttpRequest() {
         final SendCourse sc = new SendCourse();
         HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {

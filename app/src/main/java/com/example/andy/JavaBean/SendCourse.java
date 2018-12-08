@@ -4,8 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SendCourse {
-    private String USENAME = "16251101235";
-    private String PASSWORD = "zcoolshuai18O5";
+    private String USENAME = "";
+    private String PASSWORD = "";
     private String xnxqh = "2018-2019-1";
     private String skyx = "11";
     private String xqid = "1";
