@@ -6,4 +6,5 @@
     <color name="green">#7DB65B</color>
     <color name="black">#000000</color><!--课表边框颜色-->
     <color name="course_textColor">#000000</color><!--课表字体颜色-->
+    <color name="course_textColor2">#fff</color><!--课表左边字体颜色-->
 </resources>
