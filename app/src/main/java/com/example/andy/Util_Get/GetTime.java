@@ -1,8 +1,12 @@
 package com.example.andy.Util_Get;
 
+import android.annotation.TargetApi;
+import android.os.Build;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class GetTime {
     private Date startDate;
@@ -16,28 +20,35 @@ public class GetTime {
     private Date start;
     private Date end;
 
-
     //get方法  获取Date类型便于与当前时间比较
-    public Date getStart(String startTime) {
-        SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    @TargetApi(Build.VERSION_CODES.N)
+    public java.util.Calendar getStartCalendar(String startTime) {
+        java.util.Calendar c = java.util.Calendar.getInstance();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            start = simpleFormatter.parse(startTime);
+            c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+            start = simpleDateFormat.parse(startTime);
+            c.setTime(start);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return start;
+        return c;
     }
 
-
-    public Date getEnd(String endTime) {
-        SimpleDateFormat simpleFormatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+    @TargetApi(Build.VERSION_CODES.N)
+    public java.util.Calendar getEndCalendar(String endTime) {
+        java.util.Calendar c = java.util.Calendar.getInstance();
+        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            end = simpleFormatter.parse(endTime);
+            start = simpleDateFormat.parse(endTime);
+            c.setTime(start);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return end;
+        return c;
     }
+
 
     //得到XX月XX日的Date对象
     public Date getStartDate(String startTime) {
@@ -64,35 +75,35 @@ public class GetTime {
 
     //获取XX.XX.XX
     public String getStartDay(String startTime) {
-        String yyyy = startTime.substring(0,3);
-        String MM = startTime.substring(5,6);
-        String dd = startTime.substring(8,9);
-        startDay = yyyy+"."+MM+"."+dd;
+        String yyyy = startTime.substring(0, 3);
+        String MM = startTime.substring(5, 6);
+        String dd = startTime.substring(8, 9);
+        startDay = yyyy + "." + MM + "." + dd;
         return startDay;
     }
 
 
     public String getEndDay(String endTime) {
-        String yyyy = endTime.substring(0,3);
-        String MM = endTime.substring(5,6);
-        String dd = endTime.substring(8,9);
-        endDay = yyyy+"."+MM+"."+dd;
+        String yyyy = endTime.substring(0, 3);
+        String MM = endTime.substring(5, 6);
+        String dd = endTime.substring(8, 9);
+        endDay = yyyy + "." + MM + "." + dd;
         return endDay;
     }
 
 
     public String getStartHour(String startTime) {
-        String HH = startTime.substring(10,11);
-        String mm = startTime.substring(13,14);
-        startHour = HH+":"+mm;
+        String HH = startTime.substring(10, 11);
+        String mm = startTime.substring(13, 14);
+        startHour = HH + ":" + mm;
         return startHour;
     }
 
 
     public String getEndHour(String endTime) {
-        String HH = endTime.substring(10,11);
-        String mm = endTime.substring(13,14);
-        endHour = HH+":"+mm;
+        String HH = endTime.substring(10, 11);
+        String mm = endTime.substring(13, 14);
+        endHour = HH + ":" + mm;
         return endHour;
     }
 

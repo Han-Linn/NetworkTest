@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.SendCourse;
+import com.example.andy.Util_Date.getDate;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
 import com.example.andy.Util_Parse.Utility;
@@ -25,7 +26,7 @@ import java.util.TimeZone;
 public class Activity_Course extends AppCompatActivity implements View.OnClickListener {
     private List<Course> list;
     private Button appointment;
-    private TextView date;
+    private TextView date, datetime;
     private TextView yi_12_1, yi_12_2, yi_12_3, yi_34_1, yi_34_2, yi_34_3, yi_56_1, yi_56_2,
             yi_56_3, yi_78_1, yi_78_2, yi_78_3, yi_910_1, yi_910_2, yi_910_3, yi_1112_1, yi_1112_2,
             yi_1112_3, er_12_1, er_12_2, er_12_3, er_34_1, er_34_2, er_34_3, er_56_1, er_56_2,
@@ -51,9 +52,10 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //去除状态栏
-        if(Build.VERSION.SDK_INT>21){
+        if (Build.VERSION.SDK_INT > 21) {
             View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View
+                    .SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
         setContentView(R.layout.course);
@@ -66,6 +68,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
                 try {
                     Thread.sleep(1000);
                     sendOkHttpRequest();
+                    showResponse();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -90,17 +93,20 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
 
     //获取课表数据
     private void sendOkHttpRequest() {
-        final SendCourse sc = new SendCourse();
+        SendCourse sc = new SendCourse();
         HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
             @Override
             public void onSucess(String response) {
                 if (response.length() > 31) {
-                    list = Utility.parseJSONWithGSON2(response.substring(11, response.length() - 31));
-//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getClazz());
-//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getCourseName());
-//                    Log.d("Activity_Course第一", "------------------------" + list.get(2).getTeacher());
+                    list = Utility.parseJSONWithGSON2(response.substring(11, response.length() -
+                            31));
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2)
+// .getClazz());
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2)
+// .getCourseName());
+//                    Log.d("Activity_Course第一", "------------------------" + list.get(2)
+// .getTeacher());
                 }
-                showResponse();
             }
 
             @Override
@@ -111,6 +117,7 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
     }
 
     private String getTime() {
+        SendCourse sc = new SendCourse();
         final Calendar c = Calendar.getInstance();
         c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
@@ -118,70 +125,25 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
         String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
         String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
-        return mYear + "年" + mMonth + "月" + mDay + "日";
+        String mWay2 = mWay == "0" ? "日" : mWay;
+        return mYear + "年" + mMonth + "月" + mDay + "日" + "星期" + mWay2 + "第" + sc.getZc1() + "周";
     }
 
     private void showResponse() {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                rigth_showText();
-                left_showText();
+                showText_Course();
+                showText_Msg();
             }
         });
-    }
-
-
-    public class TimeThread extends Thread {
-        @Override
-        public void run() {
-            do {
-                try {
-                    Thread.sleep(1000);
-                    Message msg = new Message();
-                    msg.what = msgKey1;     //消息(一个整型值)
-                    mHandler.sendMessage(msg);      // 每隔1秒发送一个msg给mHandler
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } while (true);
-        }
-
-        //在主线程里面处理消息并更新UI界面
-        private Handler mHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                switch (msg.what) {
-                    case msgKey1:
-                        SystemTime.setText(getTime());
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-
-        //获得当前年月日时分秒星期
-        public String getTime() {
-            final Calendar c = Calendar.getInstance();
-            c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-            String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
-            String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
-            String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
-            String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
-            String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
-
-            return mYear + "年" + mMonth + "月" + mDay + "日";
-        }
-
-
     }
 
     private void init() {
         appointment = findViewById(R.id.oppointment);
         SystemTime = findViewById(R.id.mytime);
-        date=findViewById(R.id.date);
+        date = findViewById(R.id.date);
+        datetime = findViewById(R.id.datetime);
         yi_12_1 = findViewById(R.id.yi_12_1);
         yi_12_2 = findViewById(R.id.yi_12_2);
         yi_12_3 = findViewById(R.id.yi_12_3);
@@ -310,11 +272,12 @@ public class Activity_Course extends AppCompatActivity implements View.OnClickLi
         qi_1112_3 = findViewById(R.id.qi_1112_3);
     }
 
-    private void left_showText(){
-        date.setText(getTime());
+    private void showText_Msg() {
+        date.setText(getDate.getTime2());
+        datetime.setText(getDate.getTime());
     }
 
-    private void rigth_showText() {
+    private void showText_Course() {
         if (list.size() != 0) {
             yi_12_1.setText(list.get(0).getClazz());
             yi_12_2.setText(list.get(0).getCourseName());
