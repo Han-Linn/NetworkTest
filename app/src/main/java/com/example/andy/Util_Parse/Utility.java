@@ -1,9 +1,8 @@
 package com.example.andy.Util_Parse;
 
-import android.util.Log;
-
-import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.App;
+import com.example.andy.JavaBean.Course;
+import com.example.andy.Util_Get.GetTime2;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -20,6 +19,7 @@ public class Utility {
         App app = null;
         Gson gson = new Gson();
         List<App> list = new ArrayList<>();
+        List<App> list2 = new ArrayList<>();
         List<App> appList = gson.fromJson(jsonData, new TypeToken<List<App>>() {
         }.getType());
         for (App data : appList) {
@@ -30,10 +30,18 @@ public class Utility {
             app.setAddr(data.getAddr());
             app.setEndTime(data.getEndTime());
             app.setReason(data.getReason());
+
+            app.setAppointMan(data.getAppointMan());
+            app.setCreateTime(data.getCreateTime());
+            app.setStartTime(GetTime2.getTime(data.getStartTime()));
+            app.setAddr(data.getAddr());
+            app.setEndTime(GetTime2.getTime(data.getEndTime()));
+            app.setReason(data.getReason());
+
             list.add(app);
-            Log.d("Utility", "-----------------" + app.getAppointMan());
+            list2.add(app);
         }
-        return list;
+        return list2;
 
 //        list = new ArrayList<>();
 //        for (App app : appList) {
@@ -41,7 +49,7 @@ public class Utility {
 //            map.put("addr", app.getAddr());
 //            map.put("appointMan", app.getAppointMan());
 //            map.put("createTime", app.getCreateTime());
-//            map.put("startTime", app.getStartTime());
+//            map.put("startTime", app.getTime());
 //            map.put("endTime", app.getEndTime());
 //            map.put("reason", app.getReason());
 //            list.add(map);

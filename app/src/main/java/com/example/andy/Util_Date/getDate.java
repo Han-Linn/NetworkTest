@@ -15,8 +15,7 @@ public class getDate {
         String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
         String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
         return mYear + "年" + mMonth + "月" + mDay + "日" + " " + "星期" + GetWeek.getWeek(mWay) + " "
-                + "第" + sc.getZc1()
-                + "周";
+                + "第" + sc.getZc1() + "周";
     }
 
     public static String getTime2() {

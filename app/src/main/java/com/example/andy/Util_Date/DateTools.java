@@ -12,6 +12,7 @@ public class DateTools {
      * 
      * @param datetime
      * @return
+     * DateTools.dateToWeek("2017-01-01")
      */
     public static String dateToWeek(String datetime) {
         SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
@@ -28,9 +29,5 @@ public class DateTools {
         if (w < 0)
             w = 0;
         return weekDays[w];
-    }
-
-    public static void main(String[] args) {
-        System.out.println(DateTools.dateToWeek("2017-01-01"));
     }
 }

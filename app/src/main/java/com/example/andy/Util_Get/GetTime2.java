@@ -2,10 +2,6 @@ package com.example.andy.Util_Get;
 
 import android.annotation.TargetApi;
 import android.os.Build;
-import android.print.PrinterId;
-
-import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Date.GetWeek;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,12 +17,12 @@ public class GetTime2 {
 
     //获取日历对象
     @TargetApi(Build.VERSION_CODES.N)
-    public java.util.Calendar getStartCalendar(String startTime) {
+    public static java.util.Calendar getCalendar(String time) {
         java.util.Calendar c = java.util.Calendar.getInstance();
         c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         try {
-            Date start = simpleDateFormat.parse(startTime);
+            Date start = simpleDateFormat.parse(time);
             c.setTime(start);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -34,42 +30,16 @@ public class GetTime2 {
         return c;
     }
 
-    @TargetApi(Build.VERSION_CODES.N)
-    public java.util.Calendar getEndCalendar(String endTime) {
-        java.util.Calendar c = java.util.Calendar.getInstance();
-        c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        try {
-            Date end = simpleDateFormat.parse(endTime);
-            c.setTime(end);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return c;
-    }
-
-    public String getStartTime(String startTime) {
-        java.util.Calendar c = getStartCalendar(startTime);
+    public static String getTime(String time) {
+        java.util.Calendar c = getCalendar(time);
         String mYear = String.valueOf(c.get(Calendar.YEAR));
         String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);
         String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
         String mHour = String.valueOf(c.get(Calendar.HOUR));
         String mMin = String.valueOf(c.get(Calendar.MINUTE));
         String mSec = String.valueOf(c.get(Calendar.SECOND));
-        startTime= "年" + mMonth + "月" + mDay + "日" + " " + mHour + ":" + mMin + ":" + mSec;
-        return startTime;
-    }
-
-    public String getEndTime(String endTime) {
-        java.util.Calendar c = getStartCalendar(endTime);
-        String mYear = String.valueOf(c.get(Calendar.YEAR));
-        String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);
-        String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
-        String mHour = String.valueOf(c.get(Calendar.HOUR));
-        String mMin = String.valueOf(c.get(Calendar.MINUTE));
-        String mSec = String.valueOf(c.get(Calendar.SECOND));
-        endTime= "年" + mMonth + "月" + mDay + "日" + " " + mHour + ":" + mMin + ":" + mSec;
-        return endTime;
+        time = mYear + "年" + mMonth + "月" + mDay + "日" + " " + mHour + ":" + mMin + ":" + mSec;
+        return time;
     }
 
     //得到XX月XX日的Date对象
