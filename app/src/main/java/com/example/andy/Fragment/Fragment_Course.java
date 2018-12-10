@@ -1,10 +1,11 @@
 package com.example.andy.Fragment;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Date.getDate;
+import com.example.andy.Util_Date.getNowTime;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
 import com.example.andy.Util_Parse.Utility;
@@ -23,6 +24,8 @@ import java.util.List;
 public class Fragment_Course extends Fragment {
     private List<Course> list;
     private TextView datetime;
+    private static final int UPDATE_COURSE = 1;
+    private static final int UPDATE_MSG = 2;
     private TextView yi_12_1, yi_12_2, yi_12_3, yi_34_1, yi_34_2, yi_34_3, yi_56_1, yi_56_2,
             yi_56_3, yi_78_1, yi_78_2, yi_78_3, yi_910_1, yi_910_2, yi_910_3, yi_1112_1, yi_1112_2,
             yi_1112_3, er_12_1, er_12_2, er_12_3, er_34_1, er_34_2, er_34_3, er_56_1, er_56_2,
@@ -44,7 +47,8 @@ public class Fragment_Course extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                             @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_course, container, false);
         return view;
     }
@@ -53,57 +57,69 @@ public class Fragment_Course extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         init(view);
-//        new Thread(new Runnable() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(1000);
-//                    sendOkHttpRequest();
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }).start();
-        new MyThread().start();
+        new HttpThread().start();
+        new MsgThread().start();
 
     }
 
-    //获取课表数据
-    private void sendOkHttpRequest() {
-        SendCourse sc = new SendCourse();
-        HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new OnResponseListner() {
-            @Override
-            public void onSucess(String response) {
-//                Log.d("Activity_Course","--------------"+response);
-                if (response.length() > 31) {
-                    list = Utility.parseJSONWithGSON2(response.substring(11, response.length() - 31));
-                    showResponse();
-                }
-            }
-
-            @Override
-            public void onError(String error) {
-
-            }
-        });
-    }
-
-    public class MyThread extends Thread {
+    private class MsgThread extends Thread {
         @Override
         public void run() {
-            sendOkHttpRequest();
+            do {
+                try {
+                    Thread.sleep(1000);
+                    Message msg = new Message();
+                    msg.what = UPDATE_MSG;
+                    handler.sendMessage(msg);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } while (true);
         }
     }
 
-    private void showResponse() {
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                showText_Course();
-                showText_Msg();
-            }
-        });
+    private class HttpThread extends Thread {
+        @Override
+        public void run() {
+            SendCourse sc = new SendCourse();
+            HttpUtli2.postRequest2(sc.getUrl(), sc.getMap(), sc.getEncode(), new
+                    OnResponseListner() {
+                        @Override
+                        public void onSucess(String response) {
+//                Log.d("Activity_Course","--------------"+response);
+                            if (response.length() > 31) {
+                                list = Utility.parseJSONWithGSON2(response.substring(11, response
+                                        .length() -
+                                        31));
+                                Message message = new Message();
+                                message.what = UPDATE_COURSE;
+                                handler.sendMessage(message);
+                            }
+                        }
+
+                        @Override
+                        public void onError(String error) {
+
+                        }
+                    });
+        }
     }
+
+    private Handler handler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case UPDATE_COURSE:
+                    showText_Course();
+                    break;
+                case UPDATE_MSG:
+                    showText_Msg();
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     private void init(View view) {
         datetime = view.findViewById(R.id.datetime);
@@ -236,7 +252,7 @@ public class Fragment_Course extends Fragment {
     }
 
     private void showText_Msg() {
-        datetime.setText(getDate.getTime());
+        datetime.setText(getNowTime.getMsg());
     }
 
     private void showText_Course() {

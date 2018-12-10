@@ -3,6 +3,8 @@ package com.example.andy.Util_Get;
 import android.annotation.TargetApi;
 import android.os.Build;
 
+import com.example.andy.Util_Date.traString;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -35,10 +37,10 @@ public class GetTime2 {
         String mYear = String.valueOf(c.get(Calendar.YEAR));
         String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);
         String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
-        String mHour = String.valueOf(c.get(Calendar.HOUR));
+        String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));
         String mMin = String.valueOf(c.get(Calendar.MINUTE));
         String mSec = String.valueOf(c.get(Calendar.SECOND));
-        time = mYear + "年" + mMonth + "月" + mDay + "日" + " " + mHour + ":" + mMin + ":" + mSec;
+        time = mYear + "年" + mMonth + "月" + mDay + "日" + " " + traString.traStr(mHour) + ":" + traString.traStr(mMin) + ":" + traString.traStr(mSec);
         return time;
     }
 

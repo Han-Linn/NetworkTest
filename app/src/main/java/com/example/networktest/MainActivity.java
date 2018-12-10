@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     List<App> list=getList(jsonData);
                     /*for (App app:list)
                    Log.i("Activity_Appointment",""+app.getAddr()+"/"+app.getAppointMan()+"/"+app.getCreateTime()
-                           +"/"+app.getEndTime()+"/"+app.getReason()+"/"+app.getTime());*/
+                           +"/"+app.getEndTime()+"/"+app.getReason()+"/"+app.getMsg());*/
 
                 } catch (Exception e) {
                     e.printStackTrace();

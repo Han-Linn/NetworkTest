@@ -15,16 +15,14 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.App;
 import com.example.andy.Adapter.ListAdapter;
-import com.example.andy.Util_Date.getDate;
+import com.example.andy.Util_Date.getNowTime;
 import com.example.andy.Util_Parse.Utility;
 import com.example.andy.Util_Http.HttpCallbackListener;
 import com.example.andy.Util_Http.HttpUtil;
 import com.example.networktest.R;
 
-import java.util.Calendar;
 import java.util.List;
 import java.util.Map;
-import java.util.TimeZone;
 
 public class Activity_Appointment extends AppCompatActivity implements View.OnClickListener {
     private String Url = "http://ketansoft.com/kt_onlinemj/mjappoint/appointList";
@@ -45,7 +43,8 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
         //去除状态栏
         if (Build.VERSION.SDK_INT > 21) {
             View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+            decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View
+                    .SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
         setContentView(R.layout.appointment);
@@ -89,10 +88,25 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
             public void run() {
                 ListAdapter adapter = new ListAdapter(Activity_Appointment.this, listapp);
                 responseText.setAdapter(adapter);
-//                SystemTime.setText(getDate.getTime2());
+//                SystemTime.setText(getNowTime.getTime2());
             }
         });
     }
+
+    //在主线程里面处理消息并更新UI界面
+    private Handler mHandler = new Handler() {
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            switch (msg.what) {
+                case msgKey1:
+                    SystemTime.setText(getNowTime.getTime1());
+                    break;
+                default:
+                    break;
+            }
+        }
+    };
 
     public class TimeThread extends Thread {
         @Override
@@ -107,33 +121,6 @@ public class Activity_Appointment extends AppCompatActivity implements View.OnCl
                     e.printStackTrace();
                 }
             } while (true);
-        }
-
-        //在主线程里面处理消息并更新UI界面
-        private Handler mHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                switch (msg.what) {
-                    case msgKey1:
-                        SystemTime.setText(getDate.getTime());
-                        break;
-                    default:
-                        break;
-                }
-            }
-        };
-
-        //获得当前年月日时分秒星期
-        public String getTime() {
-            final Calendar c = Calendar.getInstance();
-            c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
-            String mYear = String.valueOf(c.get(Calendar.YEAR)); // 获取当前年份
-            String mMonth = String.valueOf(c.get(Calendar.MONTH) + 1);// 获取当前月份
-            String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));// 获取当前月份的日期号码
-            String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
-            String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));//时
-            return mYear + "年" + mMonth + "月" + mDay + "日";
         }
     }
 
