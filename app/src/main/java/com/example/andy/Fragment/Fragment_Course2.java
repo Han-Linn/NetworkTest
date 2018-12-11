@@ -6,7 +6,6 @@ import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +21,7 @@ import com.example.networktest.R;
 
 import java.util.List;
 
-public class Fragment_Course extends Fragment {
+public class Fragment_Course2 extends Fragment {
     private List<Course> list;
     private TextView datetime;
     private static final int UPDATE_COURSE = 1;
@@ -89,9 +88,7 @@ public class Fragment_Course extends Fragment {
                         public void onSucess(String response) {
 //                Log.d("Activity_Course","--------------"+response);
                             if (response.length() > 31) {
-                                list = Utility.parseJSONWithGSON2(response.substring(11, response
-                                        .length() -
-                                        31));
+                                list = Utility.parseJSONWithGSON2(response.substring(11, response.length() - 31));
                                 Message message = new Message();
                                 message.what = UPDATE_COURSE;
                                 handler.sendMessage(message);

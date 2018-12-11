@@ -2,11 +2,13 @@ package com.example.andy.Util_Parse;
 
 import com.example.andy.JavaBean.App;
 import com.example.andy.JavaBean.Course;
+import com.example.andy.JavaBean.Temperature;
 import com.example.andy.Util_Get.GetTime2;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -65,7 +67,7 @@ public class Utility {
             JSONArray jsonArray = new JSONArray(jsonData);
             Course getcourse = null;
             String data = null;
-            for(int i = 0; i < jsonArray.length(); i++){
+            for (int i = 0; i < jsonArray.length(); i++) {
                 data = jsonArray.get(i).toString();
                 list_jsonArray.add(data);
             }
@@ -88,5 +90,25 @@ public class Utility {
             e.printStackTrace();
         }
         return list;
+    }
+
+    //用GSON解析温度JSON数据
+    public static ArrayList<Temperature> parseJSONWithGSON3(String jsonData) {
+        Temperature tem = null;
+        List<Temperature> list = new ArrayList<>();
+        String data = null;
+        try {
+            JSONArray jsonArray = new JSONArray(jsonData);
+            data = jsonArray.get(0).toString();
+            tem = new Temperature();
+            tem.setCo2(data.split("\\\"")[3]);
+            tem.setJiaquan(data.split("\\\"")[7]);
+            tem.setWendu(data.split("\\\"")[11]);
+            tem.setShidu(data.split("\\\"")[15]);
+            list.add(tem);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return (ArrayList<Temperature>) list;
     }
 }

@@ -1,0 +1,2853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="@dimen/course_msg_top"
+                android:layout_marginLeft="@dimen/course_margin2_2"
+                android:text=""
+                android:textSize="20sp"
+                android:textColor="@color/course_textColor" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <TableLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/course_margin2_2"
+                    android:layout_marginRight="@dimen/course_margin2_2"
+                    android:layout_marginTop="@dimen/course_top">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+
+                        <LinearLayout
+                            android:layout_width="@dimen/course_left2"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/course_padding2"
+                            android:layout_marginTop="@dimen/course_padding2"
+                            android:layout_marginRight="@dimen/course_padding2"
+                            android:background="@android:color/background_light"
+                            android:orientation="vertical">
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期一"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期二"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期三"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期四"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期五"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期六"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="星期日"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--第一行 第一列-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第一二节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_12_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_12_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_12_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--第一行 第一列-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第三四节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_34_1"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_34_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_34_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_34_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第五六节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_56_1"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_56_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_56_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_56_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--第一行 第一列-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第七八节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_78_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_78_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_78_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--第一行 第一列-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第九十节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_910_1"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_910_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_910_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_910_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/black">
+
+                        <!--第一行 第一列-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_left2"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/course_padding2"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="@dimen/course_margin2_1"
+                                    android:gravity="center"
+                                    android:text="第十一十二节"
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/yi_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/yi_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/er_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/er_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/san_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/san_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/si_1112_1"
+                                    android:layout_width="match_parent"
+
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/si_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/wu_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/wu_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/liu_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/liu_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="@dimen/course_right2"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="@dimen/course_padding2"
+                                android:layout_marginRight="@dimen/course_padding2"
+                                android:layout_marginBottom="@dimen/course_padding2"
+                                android:background="@android:color/background_light"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/qi_1112_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_1112_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+
+                                <TextView
+                                    android:id="@+id/qi_1112_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/course_margin2_1"
+                                    android:layout_marginTop="@dimen/course_margin2_1"
+                                    android:layout_marginRight="@dimen/course_margin2_1"
+                                    android:layout_marginBottom="@dimen/course_margin2_1"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text=""
+                                    android:textColor="@color/course_textColor"
+                                    android:textSize="@dimen/course_textSize2" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </TableRow>
+
+
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
