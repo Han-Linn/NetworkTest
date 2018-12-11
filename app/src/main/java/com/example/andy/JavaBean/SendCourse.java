@@ -12,8 +12,8 @@ public class SendCourse {
     private String classroom = "实验楼802";
     private String zc1 = "13";
     private String zc2 = "13";
-    private String url = "http://ketansoft.com/kt_onlinemj/tbkc";
-    //    private String url = "http://2u271r1835.51mypc.cn:13683/kt_onlinemj/tbkc";
+//    private String url = "http://ketansoft.com/kt_onlinemj/tbkc";
+        private String url = "http://2u271r1835.51mypc.cn:13683/kt_onlinemj/tbkc";
     private String encode = "utf-8";
 
 
