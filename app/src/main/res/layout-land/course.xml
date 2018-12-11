@@ -172,7 +172,7 @@
                                     android:gravity="center"
                                     android:text="星期一"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -198,7 +198,7 @@
                                     android:gravity="center"
                                     android:text="星期二"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -224,7 +224,7 @@
                                     android:gravity="center"
                                     android:text="星期三"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -250,7 +250,7 @@
                                     android:gravity="center"
                                     android:text="星期四"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -276,7 +276,7 @@
                                     android:gravity="center"
                                     android:text="星期五"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -303,7 +303,7 @@
                                     android:gravity="center"
                                     android:text="星期六"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -330,7 +330,7 @@
                                     android:gravity="center"
                                     android:text="星期日"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
 
                             </LinearLayout>
@@ -368,7 +368,7 @@
                                     android:gravity="center"
                                     android:text="第一二节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -398,7 +398,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_12_2"
@@ -411,7 +411,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_12_3"
@@ -425,7 +425,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -455,7 +455,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_12_2"
@@ -468,7 +468,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_12_3"
@@ -482,7 +482,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -511,7 +511,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_12_2"
@@ -524,7 +524,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_12_3"
@@ -538,7 +538,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -567,7 +567,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_12_2"
@@ -580,7 +580,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_12_3"
@@ -594,7 +594,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -623,7 +623,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_12_2"
@@ -636,7 +636,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_12_3"
@@ -651,7 +651,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -680,7 +680,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_12_2"
@@ -693,7 +693,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_12_3"
@@ -708,7 +708,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -737,7 +737,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_12_2"
@@ -750,7 +750,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_12_3"
@@ -765,7 +765,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -800,7 +800,7 @@
                                     android:gravity="center"
                                     android:text="第三四节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -830,7 +830,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_34_2"
@@ -843,7 +843,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_34_3"
@@ -857,7 +857,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -887,7 +887,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_34_2"
@@ -900,7 +900,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_34_3"
@@ -914,7 +914,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -943,7 +943,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_34_2"
@@ -956,7 +956,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_34_3"
@@ -970,7 +970,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1000,7 +1000,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_34_2"
@@ -1013,7 +1013,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_34_3"
@@ -1027,7 +1027,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1056,7 +1056,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_34_2"
@@ -1069,7 +1069,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_34_3"
@@ -1084,7 +1084,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1113,7 +1113,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_34_2"
@@ -1126,7 +1126,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_34_3"
@@ -1141,7 +1141,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1170,7 +1170,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_34_2"
@@ -1183,7 +1183,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_34_3"
@@ -1198,7 +1198,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1232,7 +1232,7 @@
                                     android:gravity="center"
                                     android:text="第五六节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1262,7 +1262,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_56_2"
@@ -1275,7 +1275,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_56_3"
@@ -1289,7 +1289,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1319,7 +1319,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_56_2"
@@ -1332,7 +1332,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_56_3"
@@ -1346,7 +1346,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1375,7 +1375,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_56_2"
@@ -1388,7 +1388,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_56_3"
@@ -1402,7 +1402,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1432,7 +1432,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_56_2"
@@ -1445,7 +1445,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_56_3"
@@ -1459,7 +1459,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1488,7 +1488,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_56_2"
@@ -1501,7 +1501,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_56_3"
@@ -1516,7 +1516,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1545,7 +1545,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_56_2"
@@ -1558,7 +1558,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_56_3"
@@ -1573,7 +1573,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1602,7 +1602,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_56_2"
@@ -1615,7 +1615,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_56_3"
@@ -1630,7 +1630,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1665,7 +1665,7 @@
                                     android:gravity="center"
                                     android:text="第七八节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1695,7 +1695,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_78_2"
@@ -1708,7 +1708,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_78_3"
@@ -1722,7 +1722,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1752,7 +1752,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_78_2"
@@ -1765,7 +1765,7 @@
                                     android:gravity="center"
                                     android:text="商法"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_78_3"
@@ -1779,7 +1779,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1808,7 +1808,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_78_2"
@@ -1821,7 +1821,7 @@
                                     android:gravity="center"
                                     android:text="商法"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_78_3"
@@ -1835,7 +1835,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1864,7 +1864,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_78_2"
@@ -1877,7 +1877,7 @@
                                     android:gravity="center"
                                     android:text="商务智能"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_78_3"
@@ -1891,7 +1891,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1920,7 +1920,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_78_2"
@@ -1933,7 +1933,7 @@
                                     android:gravity="center"
                                     android:text="管理运筹学"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_78_3"
@@ -1948,7 +1948,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -1977,7 +1977,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_78_2"
@@ -1990,7 +1990,7 @@
                                     android:gravity="center"
                                     android:text="管理运筹学"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_78_3"
@@ -2005,7 +2005,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2034,7 +2034,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_78_2"
@@ -2047,7 +2047,7 @@
                                     android:gravity="center"
                                     android:text="管理运筹学"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_78_3"
@@ -2062,7 +2062,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2097,7 +2097,7 @@
                                     android:gravity="center"
                                     android:text="第九十节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2127,7 +2127,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_910_2"
@@ -2140,7 +2140,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_910_3"
@@ -2154,7 +2154,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2184,7 +2184,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_910_2"
@@ -2197,7 +2197,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_910_3"
@@ -2211,7 +2211,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2240,7 +2240,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_910_2"
@@ -2253,7 +2253,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_910_3"
@@ -2267,7 +2267,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2297,7 +2297,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_910_2"
@@ -2310,7 +2310,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_910_3"
@@ -2324,7 +2324,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2353,7 +2353,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_910_2"
@@ -2366,7 +2366,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_910_3"
@@ -2381,7 +2381,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2410,7 +2410,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_910_2"
@@ -2423,7 +2423,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_910_3"
@@ -2438,7 +2438,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2467,7 +2467,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_910_2"
@@ -2480,7 +2480,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_910_3"
@@ -2495,7 +2495,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2531,7 +2531,7 @@
                                     android:gravity="center"
                                     android:text="第十一十二节"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2562,7 +2562,7 @@
                                     android:gravity="center"
                                     android:text="2015电子商务1班"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_1112_2"
@@ -2575,7 +2575,7 @@
                                     android:gravity="center"
                                     android:text="管理信息系统开发与设计"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/yi_1112_3"
@@ -2589,7 +2589,7 @@
                                     android:gravity="center"
                                     android:text="杨钟瑾(2-13,15-16周)"
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2620,7 +2620,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_1112_2"
@@ -2633,7 +2633,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/er_1112_3"
@@ -2647,7 +2647,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2677,7 +2677,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_1112_2"
@@ -2690,7 +2690,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/san_1112_3"
@@ -2704,7 +2704,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2735,7 +2735,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_1112_2"
@@ -2748,7 +2748,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/si_1112_3"
@@ -2762,7 +2762,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2792,7 +2792,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_1112_2"
@@ -2805,7 +2805,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/wu_1112_3"
@@ -2819,7 +2819,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2849,7 +2849,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_1112_2"
@@ -2862,7 +2862,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/liu_1112_3"
@@ -2876,7 +2876,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -2906,7 +2906,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_1112_2"
@@ -2919,7 +2919,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
 
                                 <TextView
                                     android:id="@+id/qi_1112_3"
@@ -2933,7 +2933,7 @@
                                     android:gravity="center"
                                     android:text=""
                                     android:textColor="@color/course_textColor"
-                                    android:textSize="@dimen/course_textSize" />
+                                    android:textSize="@dimen/right_textSize" />
                             </LinearLayout>
                         </LinearLayout>
 

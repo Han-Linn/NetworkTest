@@ -18,7 +18,7 @@ public class MainActivity1 extends AppCompatActivity {
             decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
             getWindow().setStatusBarColor(Color.TRANSPARENT);
         }
-//        setContentView(R.layout.activity_first);
-        setContentView(R.layout.activity_first2);
+        setContentView(R.layout.activity_first);
+//        setContentView(R.layout.activity_first2);
     }
 }

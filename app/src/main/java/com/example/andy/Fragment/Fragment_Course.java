@@ -6,7 +6,6 @@ import android.os.Message;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import android.widget.TextView;
 
 import com.example.andy.JavaBean.Course;
 import com.example.andy.JavaBean.SendCourse;
-import com.example.andy.Util_Date.getNowTime;
 import com.example.andy.Util_Http.HttpUtli2;
 import com.example.andy.Util_Http.OnResponseListner;
 import com.example.andy.Util_Parse.Utility;
@@ -59,24 +57,6 @@ public class Fragment_Course extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         init(view);
         new HttpThread().start();
-        new MsgThread().start();
-
-    }
-
-    private class MsgThread extends Thread {
-        @Override
-        public void run() {
-            do {
-                try {
-                    Thread.sleep(1000);
-                    Message msg = new Message();
-                    msg.what = UPDATE_MSG;
-                    handler.sendMessage(msg);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            } while (true);
-        }
     }
 
     private class HttpThread extends Thread {
@@ -112,9 +92,6 @@ public class Fragment_Course extends Fragment {
             switch (msg.what) {
                 case UPDATE_COURSE:
                     showText_Course();
-                    break;
-                case UPDATE_MSG:
-                    showText_Msg();
                     break;
                 default:
                     break;
@@ -250,10 +227,6 @@ public class Fragment_Course extends Fragment {
         qi_1112_1 = view.findViewById(R.id.qi_1112_1);
         qi_1112_2 = view.findViewById(R.id.qi_1112_2);
         qi_1112_3 = view.findViewById(R.id.qi_1112_3);
-    }
-
-    private void showText_Msg() {
-        datetime.setText(getNowTime.getMsg());
     }
 
     private void showText_Course() {

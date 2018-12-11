@@ -17,9 +17,13 @@ public class getNowTime {
         String mhour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));
         String mMinute = String.valueOf(c.get(Calendar.MINUTE));
         String mSecond = String.valueOf(c.get(Calendar.SECOND));
-        return mYear + "年" + mMonth + "月" + mDay + "日" + " " + "星期" + traString.traWeek(mWay) + " "
-                + "第" + sc.getZc1() + "周" + " " + traString.traStr(mhour) + ":" +
-                traString.traStr(mMinute) + ":" + traString.traStr(mSecond) + " " + sc.getClassroom();
+        return mYear + "年" + mMonth + "月" + mDay + "日" + "  " +
+                "第" + sc.getZc1() + "周" + "  " +
+                "星期" + traString.traWeek(mWay) + "  " +
+                traString.traStr(mhour) + ":" + traString.traStr(mMinute) +"  "+
+//                ":" + traString.traStr(mSecond) + "  " +
+                sc.getClassroom()+"  "+
+                "温度：25℃  相对湿度：75%  二氧化碳浓度：350  甲醛浓度：0.08mg/m3";
     }
 
     public static String getTime1() {
