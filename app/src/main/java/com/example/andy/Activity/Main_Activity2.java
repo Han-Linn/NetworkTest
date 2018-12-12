@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.example.networktest.R;
 
-public class Main_Activity extends AppCompatActivity {
+public class Main_Activity2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
