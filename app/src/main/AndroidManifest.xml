@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme2">
         <activity
-            android:name="com.example.andy.Activity.Main_Activity22"
+            android:name="com.example.andy.Activity.Main_Activity"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
